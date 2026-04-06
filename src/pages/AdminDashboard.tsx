@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { LogOut, FileText, Shield, Phone, Save, ChevronRight } from "lucide-react";
+import { LogOut, FileText, Shield, Phone, Save, ChevronRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -17,96 +17,58 @@ const sidebarItems: { key: PageKey; label: string; icon: React.ElementType }[] =
   { key: "contact", label: "Contact Us", icon: Phone },
 ];
 
-const defaultContent: Record<PageKey, { title: string; sections: { heading: string; body: string }[] }> = {
-  privacy: {
-    title: "Privacy Policy",
-    sections: [
-      {
-        heading: "Introduction & Overview",
-        body: 'Saar ("we," "our," or "us") is a Hindu spiritual short-content platform available exclusively on Android. We are committed to protecting the privacy of our users.',
-      },
-      {
-        heading: "Information We Collect",
-        body: "We collect Account Data (name, email, profile photo via Google Sign-In), Usage Data (content interactions), Device Information, and Payment Information processed through third-party gateways.",
-      },
-      {
-        heading: "How We Use Your Information",
-        body: "We use information to provide and improve the service, personalise recommendations, process subscriptions, send notifications, respond to queries, and analyse usage patterns.",
-      },
-      {
-        heading: "Data Sharing",
-        body: "We do not sell your personal data. We may share limited information with payment processors, analytics providers, and as required by law.",
-      },
-      {
-        heading: "Your Rights",
-        body: "You have the right to access, correct, and delete your personal data, and to withdraw consent for data processing at any time.",
-      },
-    ],
-  },
-  terms: {
-    title: "Terms & Conditions",
-    sections: [
-      {
-        heading: "Acceptance of Terms",
-        body: 'By downloading, installing, or using the Saar mobile application ("App"), you agree to be bound by these Terms & Conditions.',
-      },
-      {
-        heading: "Description of Service",
-        body: "Saar is a Hindu spiritual short-content platform available exclusively on Android devices, providing devotional reels, photos, background music, and inspirational imagery.",
-      },
-      {
-        heading: "Subscriptions & Payments",
-        body: "Saar offers a trial period starting from a nominal fee, followed by a monthly subscription. Subscriptions auto-renew unless cancelled 24 hours before the end of the billing period.",
-      },
-      {
-        heading: "Content & Intellectual Property",
-        body: "All content on Saar is owned by Saar or its licensors and is protected by intellectual property laws. Content is for personal, non-commercial use only.",
-      },
-      {
-        heading: "Governing Law",
-        body: "These Terms shall be governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of the courts in India.",
-      },
-    ],
-  },
-  contact: {
-    title: "Contact Us",
-    sections: [
-      {
-        heading: "About",
-        body: "Thank you for your interest in Saar — your daily dose of divine Hindu spiritual content. Whether you have questions, need subscription help, or want to share feedback, we're here to help.",
-      },
-      {
-        heading: "Support Details",
-        body: "Our support team is available Monday through Saturday, 10:00 AM to 6:00 PM IST. We respond to all inquiries within 24–48 hours.",
-      },
-    ],
-  },
-};
-
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState<PageKey>("privacy");
-  const [content, setContent] = useState(defaultContent);
+  const [content, setContent] = useState<Record<PageKey, { title: string; sections: { heading: string; body: string }[] }> | null>(null);
   const [contactInfo, setContactInfo] = useState({
-    email: "support@saarapp.com",
-    phone: "+91 XXXXX XXXXX",
-    address: "Random Hit LLP, India",
-    supportHours: "Mon – Sat, 10:00 AM – 6:00 PM IST",
+    email: "", phone: "", address: "", supportHours: "",
   });
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem("saar_admin") !== "true") {
-      navigate("/admin");
-    }
+    const verifyAndFetch = async () => {
+      try {
+        const authRes = await fetch("/api/auth/verify");
+        const authData = await authRes.json();
+        
+        if (!authData.success) {
+          sessionStorage.removeItem("saar_admin");
+          navigate("/admin");
+          return;
+        }
+
+        const contentRes = await fetch("/api/content");
+        const contentData = await contentRes.json();
+        
+        if (contentData.content) {
+          setContent(contentData.content);
+        }
+        if (contentData.contactInfo) {
+          setContactInfo(contentData.contactInfo);
+        }
+      } catch (err) {
+        toast.error("Failed to load dashboard data");
+        navigate("/admin");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    verifyAndFetch();
   }, [navigate]);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await fetch("/api/auth/logout", { method: "POST" });
+    } catch (e) {}
     sessionStorage.removeItem("saar_admin");
     navigate("/admin");
   };
 
   const updateSection = (pageKey: PageKey, idx: number, field: "heading" | "body", value: string) => {
     setContent((prev) => {
+      if (!prev) return prev;
       const updated = { ...prev };
       updated[pageKey] = {
         ...updated[pageKey],
@@ -119,28 +81,60 @@ const AdminDashboard = () => {
   };
 
   const addSection = (pageKey: PageKey) => {
-    setContent((prev) => ({
-      ...prev,
-      [pageKey]: {
-        ...prev[pageKey],
-        sections: [...prev[pageKey].sections, { heading: "New Section", body: "" }],
-      },
-    }));
+    setContent((prev) => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        [pageKey]: {
+          ...prev[pageKey],
+          sections: [...prev[pageKey].sections, { heading: "New Section", body: "" }],
+        },
+      };
+    });
   };
 
   const removeSection = (pageKey: PageKey, idx: number) => {
-    setContent((prev) => ({
-      ...prev,
-      [pageKey]: {
-        ...prev[pageKey],
-        sections: prev[pageKey].sections.filter((_, i) => i !== idx),
-      },
-    }));
+    setContent((prev) => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        [pageKey]: {
+          ...prev[pageKey],
+          sections: prev[pageKey].sections.filter((_, i) => i !== idx),
+        },
+      };
+    });
   };
 
-  const handleSave = () => {
-    toast.success(`${content[activePage].title} content saved successfully!`);
+  const handleSave = async () => {
+    if (!content) return;
+    setIsSaving(true);
+    try {
+      const res = await fetch("/api/content", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content, contactInfo }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        toast.success(`${content[activePage].title} content saved successfully!`);
+      } else {
+        toast.error("Failed to save changes.");
+      }
+    } catch (err) {
+      toast.error("Network error while saving.");
+    } finally {
+      setIsSaving(false);
+    }
   };
+
+  if (isLoading || !content) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Loader2 className="w-8 h-8 animate-spin text-primary" />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex bg-background">
@@ -191,8 +185,8 @@ const AdminDashboard = () => {
                 Edit content sections below
               </p>
             </div>
-            <Button onClick={handleSave} className="rounded-xl bg-primary text-primary-foreground">
-              <Save className="w-4 h-4 mr-2" />
+            <Button onClick={handleSave} disabled={isSaving} className="rounded-xl bg-primary text-primary-foreground">
+              {isSaving ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Save className="w-4 h-4 mr-2" />}
               Save Changes
             </Button>
           </div>
@@ -206,10 +200,13 @@ const AdminDashboard = () => {
               <Input
                 value={content[activePage].title}
                 onChange={(e) =>
-                  setContent((prev) => ({
-                    ...prev,
-                    [activePage]: { ...prev[activePage], title: e.target.value },
-                  }))
+                  setContent((prev) => {
+                    if (!prev) return prev;
+                    return {
+                      ...prev,
+                      [activePage]: { ...prev[activePage], title: e.target.value },
+                    };
+                  })
                 }
                 className="rounded-xl"
               />

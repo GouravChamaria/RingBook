@@ -9,18 +9,33 @@ import saarLogo from "@/assets/saar-logo.svg";
 import { toast } from "sonner";
 
 const AdminLogin = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin123") {
-      sessionStorage.setItem("saar_admin", "true");
-      navigate("/admin/dashboard");
-    } else {
-      toast.error("Invalid credentials. Please try again.");
+    setIsLoading(true);
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      
+      const data = await res.json();
+      if (data.success) {
+        sessionStorage.setItem("saar_admin", "true");
+        navigate("/admin/dashboard");
+      } else {
+        toast.error(data.error || "Invalid credentials. Please try again.");
+      }
+    } catch (err) {
+      toast.error("Failed to connect to the server.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -37,12 +52,13 @@ const AdminLogin = () => {
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-5">
             <div className="space-y-2">
-              <Label htmlFor="username">Username</Label>
+              <Label htmlFor="email">Email</Label>
               <Input
-                id="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Enter username"
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter email"
                 required
                 className="rounded-xl"
               />

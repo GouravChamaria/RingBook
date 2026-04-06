@@ -1,101 +1,131 @@
-import { Mail, Clock, MapPin, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Contact = () => {
+  const [content, setContent] = useState<any>(null);
+  const [contactInfo, setContactInfo] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/api/content')
+      .then(res => res.json())
+      .then(data => {
+        if (data.content && data.content.contact) {
+          setContent(data.content.contact);
+        }
+        if (data.contactInfo) {
+          setContactInfo(data.contactInfo);
+        }
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
+  if (loading) {
+    return (
+      <Layout>
+        <div className="min-h-screen flex items-center justify-center">
+          <Loader2 className="w-8 h-8 animate-spin text-primary" />
+        </div>
+      </Layout>
+    );
+  }
+
+  if (!content) return null;
+
   return (
     <Layout>
+      {/* Hero banner */}
       <section className="hero-gradient py-16 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-2">
-            Contact Us
+            {content.title}
           </h1>
-          <p className="text-muted-foreground font-body">We'd love to hear from you</p>
         </div>
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
-          <AnimatedSection>
-            <div className="prose prose-neutral max-w-none font-body space-y-6 text-muted-foreground leading-relaxed">
-              <p>
-                Thank you for your interest in Saar — your daily dose of divine Hindu spiritual content. Whether you
-                have questions about our app, need help with your subscription, want to report a technical issue, or
-                simply want to share your feedback, we're here to help.
-              </p>
-              <p>
-                Saar is a product of <strong className="text-foreground">Random Hit LLP</strong>, a technology company
-                dedicated to building meaningful digital experiences. We take pride in creating content that inspires
-                devotion and connects people with their spiritual roots.
-              </p>
-              <p>
-                Our support team is available Monday through Saturday, from 10:00 AM to 6:00 PM IST. We strive to
-                respond to all inquiries within 24–48 hours. For urgent matters related to subscriptions or account
-                access, please include your registered email address and a brief description of the issue so we can
-                assist you as quickly as possible.
-              </p>
-              <p>
-                If you're experiencing a technical issue with the app, please provide details such as your device model,
-                Android version, and a description of the problem. Screenshots are always helpful and allow us to
-                diagnose issues more efficiently.
-              </p>
-              <p>
-                For business inquiries, partnership opportunities, or media-related requests, please reach out to us
-                via the email address provided below. We welcome collaborations that align with our mission of spreading
-                spiritual awareness and devotion through digital content.
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Contact Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-            <AnimatedSection delay={0.1}>
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border">
-                <div className="w-10 h-10 rounded-xl bg-saffron-light flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground font-body text-sm">Email</p>
-                  <p className="text-muted-foreground text-sm">support@saarapp.com</p>
-                </div>
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <AnimatedSection>
+              <div className="prose prose-neutral max-w-none font-body space-y-8 text-muted-foreground leading-relaxed">
+                {content.sections.map((section: any, index: number) => (
+                  <div key={index}>
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">{section.heading}</h2>
+                    <p className="whitespace-pre-wrap">{section.body}</p>
+                  </div>
+                ))}
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.15}>
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border">
-                <div className="w-10 h-10 rounded-xl bg-saffron-light flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground font-body text-sm">Phone</p>
-                  <p className="text-muted-foreground text-sm">+91 XXXXX XXXXX</p>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border">
-                <div className="w-10 h-10 rounded-xl bg-saffron-light flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground font-body text-sm">Support Hours</p>
-                  <p className="text-muted-foreground text-sm">Mon – Sat, 10:00 AM – 6:00 PM IST</p>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.25}>
-              <div className="flex items-start gap-4 p-6 rounded-2xl bg-card border border-border">
-                <div className="w-10 h-10 rounded-xl bg-saffron-light flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground font-body text-sm">Address</p>
-                  <p className="text-muted-foreground text-sm">Random Hit LLP, India</p>
-                </div>
-              </div>
-            </AnimatedSection>
+            {contactInfo && (
+              <AnimatedSection delay={0.2}>
+                <Card className="border-border bg-card shadow-lg">
+                  <CardContent className="p-8 space-y-8">
+                    <h3 className="text-2xl font-display font-bold text-foreground">Get in Touch</h3>
+                    
+                    <div className="space-y-6">
+                      {contactInfo.email && (
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <Mail className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Email</p>
+                            <a href={`mailto:${contactInfo.email}`} className="text-muted-foreground hover:text-primary transition-colors">
+                              {contactInfo.email}
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {contactInfo.phone && (
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <Phone className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Phone</p>
+                            <a href={`tel:${contactInfo.phone}`} className="text-muted-foreground hover:text-primary transition-colors">
+                              {contactInfo.phone}
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {contactInfo.address && (
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <MapPin className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Address</p>
+                            <p className="text-muted-foreground">{contactInfo.address}</p>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {contactInfo.supportHours && (
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                            <Clock className="w-5 h-5 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Support Hours</p>
+                            <p className="text-muted-foreground">{contactInfo.supportHours}</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            )}
+            
           </div>
         </div>
       </section>
