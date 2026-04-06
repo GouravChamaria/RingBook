@@ -6,10 +6,32 @@ import cookieParser from 'cookie-parser';
 import { PrismaClient } from '@prisma/client';
 import dotenv from 'dotenv';
 
+import fs from 'fs';
+import path from 'path';
+
 dotenv.config();
 
 const app = express();
-const prisma = new PrismaClient();
+
+let prisma: PrismaClient;
+
+if (process.env.VERCEL) {
+  const tempDbPath = '/tmp/dev.db';
+  if (!fs.existsSync(tempDbPath)) {
+    try {
+      fs.copyFileSync(path.join(process.cwd(), 'prisma', 'dev.db'), tempDbPath);
+    } catch (e) {
+      console.error('Failed to copy db to /tmp', e);
+    }
+  }
+  prisma = new PrismaClient({
+    datasources: {
+      db: { url: 'file:/tmp/dev.db' }
+    }
+  });
+} else {
+  prisma = new PrismaClient();
+}
 
 const JWT_SECRET = process.env.JWT_SECRET || 'super-secret-key-for-saar';
 

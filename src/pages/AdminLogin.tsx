@@ -33,6 +33,7 @@ const AdminLogin = () => {
         toast.error(data.error || "Invalid credentials. Please try again.");
       }
     } catch (err) {
+      console.error("Login fetch error:", err);
       toast.error("Failed to connect to the server.");
     } finally {
       setIsLoading(false);
