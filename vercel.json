@@ -7,17 +7,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/"
-    }
-  ],
-  "builds": [
-    {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/vite"
+      "destination": "/index.html"
     }
   ]
 }
