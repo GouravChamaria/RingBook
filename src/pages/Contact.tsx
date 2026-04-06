@@ -21,7 +21,10 @@ const Contact = () => {
         }
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch((err) => {
+        console.error("Failed to fetch contact content:", err);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
@@ -34,7 +37,16 @@ const Contact = () => {
     );
   }
 
-  if (!content) return null;
+  if (!content) {
+    return (
+      <Layout>
+        <div className="container mx-auto px-4 py-20 text-center min-h-[50vh] flex flex-col justify-center">
+          <h2 className="text-2xl font-bold text-foreground">Content Not Found</h2>
+          <p className="text-muted-foreground mt-2">We could not load the content at this time. Please try again later.</p>
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
