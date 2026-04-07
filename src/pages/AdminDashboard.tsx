@@ -23,9 +23,6 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState<PageKey>("privacy");
   const [content, setContent] = useState<Record<PageKey, { title: string; body: string }> | null>(null);
-  const [contactInfo, setContactInfo] = useState({
-    email: "", phone: "", address: "", supportHours: "",
-  });
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -64,9 +61,6 @@ const AdminDashboard = () => {
             }
           }
           setContent(normalized);
-        }
-        if (contentData.contactInfo) {
-          setContactInfo(contentData.contactInfo);
         }
       } catch (err) {
         toast.error("Failed to load dashboard data");
@@ -117,7 +111,7 @@ const AdminDashboard = () => {
       const res = await fetch("/api/content", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: contentToSave, contactInfo }),
+        body: JSON.stringify({ content: contentToSave }),
       });
       const data = await res.json();
       if (data.success) {
@@ -217,50 +211,7 @@ const AdminDashboard = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Info (only for contact page) */}
-          {activePage === "contact" && (
-            <Card className="mb-6 border-border">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-body">Contact Information</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label className="text-xs">Email</Label>
-                    <Input
-                      value={contactInfo.email}
-                      onChange={(e) => setContactInfo({ ...contactInfo, email: e.target.value })}
-                      className="rounded-xl"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label className="text-xs">Phone</Label>
-                    <Input
-                      value={contactInfo.phone}
-                      onChange={(e) => setContactInfo({ ...contactInfo, phone: e.target.value })}
-                      className="rounded-xl"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label className="text-xs">Address</Label>
-                    <Input
-                      value={contactInfo.address}
-                      onChange={(e) => setContactInfo({ ...contactInfo, address: e.target.value })}
-                      className="rounded-xl"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label className="text-xs">Support Hours</Label>
-                    <Input
-                      value={contactInfo.supportHours}
-                      onChange={(e) => setContactInfo({ ...contactInfo, supportHours: e.target.value })}
-                      className="rounded-xl"
-                    />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          )}
+
 
           {/* Content Editor */}
           <Card className="border-border">
