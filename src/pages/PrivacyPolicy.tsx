@@ -60,8 +60,8 @@ const PrivacyPolicy = () => {
             <div className="prose prose-neutral max-w-none font-body space-y-8 text-muted-foreground leading-relaxed">
               {content.sections.map((section: any, index: number) => (
                 <div key={index}>
-                  <h2 className="text-2xl font-display font-bold text-foreground mb-4">{section.heading}</h2>
-                  <p className="whitespace-pre-wrap">{section.body}</p>
+                  {section.heading && <h2 className="text-2xl font-display font-bold text-foreground mb-4">{section.heading}</h2>}
+                  <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: section.body }} />
                 </div>
               ))}
             </div>

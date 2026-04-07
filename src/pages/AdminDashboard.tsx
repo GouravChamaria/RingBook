@@ -8,6 +8,8 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import saarLogo from "@/assets/saar-logo.svg";
 import { toast } from "sonner";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 type PageKey = "privacy" | "terms" | "contact";
 
@@ -20,7 +22,7 @@ const sidebarItems: { key: PageKey; label: string; icon: React.ElementType }[] =
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [activePage, setActivePage] = useState<PageKey>("privacy");
-  const [content, setContent] = useState<Record<PageKey, { title: string; sections: { heading: string; body: string }[] }> | null>(null);
+  const [content, setContent] = useState<Record<PageKey, { title: string; body: string }> | null>(null);
   const [contactInfo, setContactInfo] = useState({
     email: "", phone: "", address: "", supportHours: "",
   });
@@ -43,7 +45,25 @@ const AdminDashboard = () => {
         const contentData = await contentRes.json();
         
         if (contentData.content) {
-          setContent(contentData.content);
+          const raw = contentData.content;
+          const normalized: any = {};
+          for (const key of ["privacy", "terms", "contact"]) {
+            if (raw[key] && raw[key].sections) {
+              if (raw[key].sections.length > 1) {
+                const mergedHtml = raw[key].sections.map((s: any) => 
+                  (s.heading ? `<h2>${s.heading}</h2>` : '') + `<p>${s.body}</p>`
+                ).join('');
+                normalized[key] = { ...raw[key], body: mergedHtml };
+              } else if (raw[key].sections.length === 1) {
+                normalized[key] = { ...raw[key], body: (raw[key].sections[0].heading ? `<h2>${raw[key].sections[0].heading}</h2>` : '') + raw[key].sections[0].body };
+              } else {
+                normalized[key] = { ...raw[key], body: "" };
+              }
+            } else if (raw[key]) {
+              normalized[key] = { ...raw[key], body: "" };
+            }
+          }
+          setContent(normalized);
         }
         if (contentData.contactInfo) {
           setContactInfo(contentData.contactInfo);
@@ -66,41 +86,14 @@ const AdminDashboard = () => {
     navigate("/admin");
   };
 
-  const updateSection = (pageKey: PageKey, idx: number, field: "heading" | "body", value: string) => {
-    setContent((prev) => {
-      if (!prev) return prev;
-      const updated = { ...prev };
-      updated[pageKey] = {
-        ...updated[pageKey],
-        sections: updated[pageKey].sections.map((s, i) =>
-          i === idx ? { ...s, [field]: value } : s
-        ),
-      };
-      return updated;
-    });
-  };
-
-  const addSection = (pageKey: PageKey) => {
+  const updateBody = (pageKey: PageKey, value: string) => {
     setContent((prev) => {
       if (!prev) return prev;
       return {
         ...prev,
         [pageKey]: {
           ...prev[pageKey],
-          sections: [...prev[pageKey].sections, { heading: "New Section", body: "" }],
-        },
-      };
-    });
-  };
-
-  const removeSection = (pageKey: PageKey, idx: number) => {
-    setContent((prev) => {
-      if (!prev) return prev;
-      return {
-        ...prev,
-        [pageKey]: {
-          ...prev[pageKey],
-          sections: prev[pageKey].sections.filter((_, i) => i !== idx),
+          body: value,
         },
       };
     });
@@ -109,11 +102,22 @@ const AdminDashboard = () => {
   const handleSave = async () => {
     if (!content) return;
     setIsSaving(true);
+
+    const contentToSave: any = {};
+    for (const key of ["privacy", "terms", "contact"]) {
+      if (content[key as PageKey]) {
+        contentToSave[key] = {
+          ...content[key as PageKey],
+          sections: [{ heading: "", body: content[key as PageKey].body }],
+        };
+      }
+    }
+
     try {
       const res = await fetch("/api/content", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content, contactInfo }),
+        body: JSON.stringify({ content: contentToSave, contactInfo }),
       });
       const data = await res.json();
       if (data.success) {
@@ -258,47 +262,30 @@ const AdminDashboard = () => {
             </Card>
           )}
 
-          {/* Content Sections */}
-          <div className="space-y-4">
-            {content[activePage].sections.map((section, idx) => (
-              <Card key={idx} className="border-border">
-                <CardContent className="pt-6 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <Label className="text-xs text-muted-foreground">Section {idx + 1}</Label>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => removeSection(activePage, idx)}
-                      className="text-xs text-destructive hover:text-destructive"
-                    >
-                      Remove
-                    </Button>
-                  </div>
-                  <Input
-                    value={section.heading}
-                    onChange={(e) => updateSection(activePage, idx, "heading", e.target.value)}
-                    placeholder="Section heading"
-                    className="rounded-xl font-semibold"
-                  />
-                  <Textarea
-                    value={section.body}
-                    onChange={(e) => updateSection(activePage, idx, "body", e.target.value)}
-                    placeholder="Section content..."
-                    rows={4}
-                    className="rounded-xl"
-                  />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <Button
-            variant="outline"
-            onClick={() => addSection(activePage)}
-            className="mt-4 rounded-xl w-full border-dashed"
-          >
-            + Add Section
-          </Button>
+          {/* Content Editor */}
+          <Card className="border-border">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-sm font-body">Page Content</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="bg-background rounded-b-xl overflow-hidden [&_.ql-toolbar]:rounded-t-xl [&_.ql-container]:rounded-b-xl [&_.ql-editor]:min-h-[300px]">
+                <ReactQuill 
+                  theme="snow"
+                  value={content[activePage].body} 
+                  onChange={(val) => updateBody(activePage, val)}
+                  modules={{
+                    toolbar: [
+                      [{ 'header': [1, 2, 3, false] }],
+                      [{ 'size': ['small', false, 'large', 'huge'] }],
+                      ['bold', 'italic', 'underline', 'strike'],
+                      [{'list': 'ordered'}, {'list': 'bullet'}],
+                      ['clean']
+                    ]
+                  }}
+                />
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
     </div>
