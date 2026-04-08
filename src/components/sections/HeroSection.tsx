@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/PhoneMockup";
+import homeFeedScreenshot from "@/assets/screenshots/home-feed.jpeg";
 
 const HeroSection = () => {
   const scrollToFeatures = () => {
@@ -59,7 +60,6 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Phone mockup */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -67,7 +67,13 @@ const HeroSection = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="animate-float">
-              <PhoneMockup label="Replace with App Screenshot" />
+              <PhoneMockup
+                src={homeFeedScreenshot}
+                alt="Saar home feed screen"
+                label="Saar home feed"
+                imageClassName="object-top"
+                priority
+              />
             </div>
           </motion.div>
         </div>

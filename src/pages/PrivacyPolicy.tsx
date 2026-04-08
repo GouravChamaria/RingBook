@@ -1,56 +1,80 @@
-import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Loader2 } from "lucide-react";
+
+const sections = [
+  {
+    heading: "Introduction",
+    body: `Welcome to Saar (सार). Saar is a Hindu spiritual short-content platform that allows users to stream, like, share, and download devotional reels (short videos), photos, and spiritual imagery on Android devices. This Privacy Policy explains what information we collect, how we use it, and how we protect it. By using the Saar app, you agree to the practices described in this policy. If you do not agree, please do not use the app.`,
+  },
+  {
+    heading: "Information We Collect",
+    body: `We collect only the minimum information necessary to provide you with the Saar experience. When you sign in to Saar, we use Google Sign-In as the sole authentication method. Through this process, we receive your full name, email address, and Google profile photo. We do not collect your phone number, home address, date of birth, or any other personal information beyond what Google provides during sign-in. We do not have access to your Google password at any time.
+
+We also collect certain usage data automatically when you use the app. This includes information about which content you view, like, share, comment on, or download; how many times you scroll through the feed; and general interaction patterns within the app. We collect this data to improve content delivery, personalise your experience, and manage platform features such as scroll limits and download quotas. We also collect basic device information including your device model, operating system version, and a unique device identifier. This helps us ensure compatibility and troubleshoot technical issues.`,
+  },
+  {
+    heading: "What We Do Not Collect",
+    body: `We want to be clear about what we do not collect. We do not collect your precise GPS location. We do not access your contacts, call logs, or SMS messages. We do not access your camera or microphone. We do not read any files on your device beyond the ones you explicitly choose to download through the app. We do not collect any financial information directly — all payment processing for subscriptions and trials is handled entirely by our third-party payment gateway, and we never see or store your card number, UPI ID, or banking credentials.`,
+  },
+  {
+    heading: "How We Use Your Information",
+    body: `We use your name and email address to create and manage your Saar account, authenticate you when you return to the app, and communicate with you regarding your subscription, account status, or support queries. We use your usage data to decide which content to show you, to track download quotas and feature access based on your subscription tier, and to generate anonymised, aggregated analytics that help us understand how the platform is being used overall. We use your device information solely for technical compatibility and debugging purposes. We do not use your personal information to serve third-party targeted advertisements. We do not sell, rent, or trade your personal data to any third party for commercial purposes.`,
+  },
+  {
+    heading: "Content Downloads",
+    body: `The Saar app allows subscribed users to download devotional reels (short videos) and photos directly to their device. When you download content, the file is saved to your device's local storage. We do not monitor, scan, or access any other files on your device. Downloaded content is provided for personal, non-commercial use only. You may not redistribute, re-upload, or commercialise any content downloaded from Saar.`,
+  },
+  {
+    heading: "Subscriptions and Billing",
+    body: `Saar offers a trial period and a recurring monthly subscription. Subscription payments are processed by our third-party payment gateway partner. We receive confirmation of successful or failed transactions but do not store your payment credentials. Your subscription status — active, trial, or cancelled — is stored on our servers and linked to your account. If you cancel your subscription, you retain access until the end of your current billing period. If you cancel during a free trial, access is revoked immediately. You can manage or cancel your subscription from within the app.`,
+  },
+  {
+    heading: "Data Sharing",
+    body: `We do not sell your personal data. We share your data only in the following limited circumstances: with our payment processing partner solely to complete your subscription transaction; with analytics service providers to help us understand app usage in aggregated, anonymised form; and with law enforcement or regulatory authorities if we are required to do so by applicable law, court order, or governmental authority. Any third-party service providers we work with are contractually required to handle your data securely and only for the specific purpose for which it was shared.`,
+  },
+  {
+    heading: "Data Retention",
+    body: `We retain your account data for as long as your account is active. If you delete your account, we will delete your personal data from our systems within 30 days of receiving your account deletion request, except where we are required by law to retain certain records (such as transaction records for tax purposes, which may be retained for up to 7 years as required under Indian law).`,
+  },
+  {
+    heading: "Account Deletion",
+    body: `You have the right to delete your Saar account at any time. You can request account deletion directly from within the app by navigating to Account → Settings → Delete Account. Alternatively, you can send an email to support@randomhit.site with the subject line "Account Deletion Request" and include the email address associated with your Saar account. We will process your deletion request within 30 days. Upon deletion, your profile information, usage history, and all associated personal data will be permanently removed from our servers. Note that downloaded content already saved to your device will not be remotely deleted, as it resides on your local storage.
+
+User can also request their account deletion from here:
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform" target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-2">https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform</a>`,
+  },
+  {
+    heading: "Children's Privacy",
+    body: `The Saar app is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has created an account or provided us with personal information, we will delete that information immediately. If you are a parent or guardian and believe your child has used Saar without your consent, please contact us at support@randomhit.site.`,
+  },
+  {
+    heading: "Security",
+    body: `We take reasonable technical and organisational measures to protect your personal information from unauthorised access, disclosure, alteration, or destruction. All data transmitted between the app and our servers is encrypted using industry-standard TLS/SSL encryption. Your account is protected by Google's authentication infrastructure. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.`,
+  },
+  {
+    heading: "Your Rights",
+    body: `You have the right to access the personal data we hold about you, to request correction of any inaccurate information, to request deletion of your account and associated data, and to withdraw your consent to data processing at any time (which will result in account termination). To exercise any of these rights, please contact us at support@randomhit.site.`,
+  },
+  {
+    heading: "Changes to This Privacy Policy",
+    body: `We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make significant changes, we will notify you through a prominent notice within the app. Your continued use of Saar after such notice constitutes your acceptance of the updated policy. We encourage you to review this page periodically.`,
+  },
+  {
+    heading: "Contact",
+    body: `If you have any questions, concerns, or complaints about this Privacy Policy or our data practices, please contact us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a>. We will respond to all privacy-related enquiries within 48 hours on business days.`,
+  },
+];
 
 const PrivacyPolicy = () => {
-  const [content, setContent] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch('/api/content')
-      .then(res => res.json())
-      .then(data => {
-        if (data.content && data.content.privacy) {
-          setContent(data.content.privacy);
-        }
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch privacy policy:", err);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return (
-      <Layout>
-        <div className="min-h-screen flex items-center justify-center">
-          <Loader2 className="w-8 h-8 animate-spin text-primary" />
-        </div>
-      </Layout>
-    );
-  }
-
-  if (!content) {
-    return (
-      <Layout>
-        <div className="container mx-auto px-4 py-20 text-center min-h-[50vh] flex flex-col justify-center">
-          <h2 className="text-2xl font-bold text-foreground">Content Not Found</h2>
-          <p className="text-muted-foreground mt-2">We could not load the content at this time. Please try again later.</p>
-        </div>
-      </Layout>
-    );
-  }
-
   return (
     <Layout>
       {/* Hero banner */}
       <section className="hero-gradient py-16 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-2">
-            {content.title}
+            Privacy Policy
           </h1>
+          <p className="text-muted-foreground mt-4 text-sm">Last Updated: April 6, 2025</p>
         </div>
       </section>
 
@@ -58,10 +82,17 @@ const PrivacyPolicy = () => {
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <AnimatedSection>
             <div className="prose prose-neutral max-w-none font-body space-y-8 text-muted-foreground leading-relaxed">
-              {content.sections.map((section: any, index: number) => (
+              {sections.map((section, index) => (
                 <div key={index}>
-                  {section.heading && <h2 className="text-2xl font-display font-bold text-foreground mb-4">{section.heading}</h2>}
-                  <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: section.body }} />
+                  {section.heading && (
+                    <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+                      {section.heading}
+                    </h2>
+                  )}
+                  <div
+                    className="whitespace-pre-wrap"
+                    dangerouslySetInnerHTML={{ __html: section.body }}
+                  />
                 </div>
               ))}
             </div>
