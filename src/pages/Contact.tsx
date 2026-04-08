@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Mail } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const sections = [
   {
@@ -32,6 +32,30 @@ User can also request their account deletion from here:
   },
 ];
 
+const contactDetails = [
+  {
+    icon: Phone,
+    label: "Phone",
+    content: (
+      <a href="tel:+918769763320" className="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
+        +91 87697 63320
+      </a>
+    ),
+  },
+  {
+    icon: MapPin,
+    label: "Registered Office",
+    content: (
+      <address className="not-italic space-y-1 text-foreground">
+        <p className="text-2xl font-semibold">Random Hit LLP</p>
+        <p>RD 4 Floor No: First, Ridhi Sidhi Enclave 1st</p>
+        <p>Sri Ganganagar, Rajasthan</p>
+        <p>India - 335001</p>
+      </address>
+    ),
+  },
+];
+
 const Contact = () => {
   return (
     <Layout>
@@ -50,7 +74,6 @@ const Contact = () => {
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <AnimatedSection>
-            {/* Email highlight card */}
             <div className="flex items-center gap-4 p-5 rounded-2xl bg-primary/10 border border-primary/20 mb-10">
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                 <Mail className="w-5 h-5 text-primary" />
@@ -64,6 +87,23 @@ const Contact = () => {
                   support@randomhit.site
                 </a>
               </div>
+            </div>
+
+            <div className="space-y-5 mb-12">
+              {contactDetails.map((detail) => (
+                <div
+                  key={detail.label}
+                  className="flex items-start gap-5 rounded-3xl border border-border bg-card/80 p-6 shadow-sm"
+                >
+                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-primary/10">
+                    <detail.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-lg text-muted-foreground">{detail.label}</p>
+                    {detail.content}
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="prose prose-neutral max-w-none font-body space-y-8 text-muted-foreground leading-relaxed">

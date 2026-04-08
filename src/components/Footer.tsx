@@ -2,12 +2,6 @@ import { Link } from "react-router-dom";
 import saarLogo from "@/assets/saar-logo.svg";
 
 const Footer = () => {
-  const linksCol1 = [
-    { label: "Home", to: "/" },
-    { label: "Features", to: "/#features" },
-    { label: "About", to: "/#about" },
-  ];
-
   const linksCol2 = [
     { label: "Privacy Policy", to: "/privacy-policy" },
     { label: "Terms & Conditions", to: "/terms-and-conditions" },
@@ -19,8 +13,7 @@ const Footer = () => {
       <div className="absolute inset-0 mandala-bg opacity-50 pointer-events-none" />
 
       <div className="container mx-auto px-4 py-12 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {/* Logo & tagline */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
           <div className="flex flex-col gap-3">
             <img src={saarLogo} alt="Saar" className="h-10 w-fit" />
             <p className="text-sm text-muted-foreground max-w-xs">
@@ -28,22 +21,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links Col 1 */}
-          <div className="flex flex-col gap-2">
-            <h4 className="text-sm font-semibold font-body text-foreground mb-1">Quick Links</h4>
-            {linksCol1.map((link) => (
-              <Link
-                key={link.label}
-                to={link.to}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Quick Links Col 2 */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 md:justify-self-end">
             <h4 className="text-sm font-semibold font-body text-foreground mb-1">Legal</h4>
             {linksCol2.map((link) => (
               <Link
