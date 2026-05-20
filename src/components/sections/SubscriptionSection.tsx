@@ -1,6 +1,7 @@
 import { Check, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import { PLAY_STORE_URL } from "@/lib/constants";
 
 const benefits = [
   "Unlimited HD reel downloads — no watermark",
@@ -40,7 +41,7 @@ const SubscriptionSection = () => {
               </ul>
 
               <div className="text-center">
-                <a href="#play-store" target="_blank" rel="noopener noreferrer">
+                <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
                   <Button className="rounded-full bg-primary text-primary-foreground hover:scale-[1.04] transition-transform shadow-lg px-10 py-6 text-base">
                     <Download className="w-5 h-5 mr-2" />
                     Start Your Trial Today

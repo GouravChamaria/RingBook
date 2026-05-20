@@ -1,6 +1,7 @@
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
+import { PLAY_STORE_URL } from "@/lib/constants";
 
 const DownloadCTASection = () => {
   return (
@@ -14,7 +15,7 @@ const DownloadCTASection = () => {
           <p className="text-primary-foreground/80 font-body text-lg mb-8 max-w-xl mx-auto">
             Download Saar free on Android.
           </p>
-          <a href="#play-store" target="_blank" rel="noopener noreferrer">
+          <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
             <Button className="rounded-full bg-card text-primary hover:scale-[1.04] transition-transform shadow-xl px-10 py-6 text-base font-semibold">
               <Download className="w-5 h-5 mr-2" />
               Google Play Store

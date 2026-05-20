@@ -3,6 +3,7 @@ import { Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/PhoneMockup";
 import homeFeedScreenshot from "@/assets/screenshots/home-feed.jpeg";
+import { PLAY_STORE_URL } from "@/lib/constants";
 
 const HeroSection = () => {
   const scrollToFeatures = () => {
@@ -44,7 +45,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-wrap gap-4"
             >
-              <a href="#play-store" target="_blank" rel="noopener noreferrer">
+              <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
                 <Button className="rounded-full bg-primary text-primary-foreground hover:scale-[1.04] transition-transform shadow-lg px-8 py-6 text-base">
                   <Download className="w-5 h-5 mr-2" />
                   Download on Google Play

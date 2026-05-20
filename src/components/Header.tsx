@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import saarLogo from "@/assets/saar-logo.svg";
+import { PLAY_STORE_URL } from "@/lib/constants";
 
 const navLinks = [
   { label: "Features", href: "/#features" },
@@ -73,7 +74,7 @@ const Header = () => {
               </Link>
             )
           )}
-          <a href="#play-store" target="_blank" rel="noopener noreferrer">
+          <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
             <Button className="rounded-full bg-primary text-primary-foreground hover:scale-[1.04] transition-transform shadow-md px-6">
               <Download className="w-4 h-4 mr-2" />
               Download App
@@ -116,7 +117,7 @@ const Header = () => {
               </Link>
             )
           )}
-          <a href="#play-store" target="_blank" rel="noopener noreferrer" className="mt-2">
+          <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="mt-2">
             <Button className="w-full rounded-full bg-primary text-primary-foreground shadow-md">
               <Download className="w-4 h-4 mr-2" />
               Download App
