@@ -20,7 +20,7 @@ const AboutSection = () => {
                 accessible format: short devotional reels and sacred imagery, curated with love and reverence.
               </p>
               <p>
-                With our new <strong className="text-foreground">AI Spiritual & Astrology Guidance</strong>, you can also converse with our AI Panditji. Get personalised Bhavishyafal, daily Rashifal, and in-depth Kundali readings instantly, combining ancient Hindu wisdom with state-of-the-art AI technology.
+                With our newly introduced <strong className="text-foreground">Astrology & Panditji Guidance</strong>, Saar offers even more features. Along with watching devotional reels and bhakti content, you can now explore detailed astrology. Simply share your date of birth, place of birth, time, and name, and Panditji will guide you throughout your spiritual and astrological journey. Generate your personalized Kundali, ask your life questions, and get custom predictions to light up your path.
               </p>
               <p>Available exclusively on Android.</p>
             </div>

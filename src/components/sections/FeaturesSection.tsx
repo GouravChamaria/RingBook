@@ -1,4 +1,4 @@
-import { Play, Image, MessageSquare, Download, Sparkles, Share2 } from "lucide-react";
+import { Play, Image, Music, Compass, Star, MessageSquare, Download, Sparkles, Share2 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const features = [
@@ -13,9 +13,24 @@ const features = [
     description: "High-quality devotional images of deities, temples, and spiritual scenes for daily inspiration.",
   },
   {
+    icon: Music,
+    title: "Background Devotional Music",
+    description: "Immerse yourself in soothing bhajans and sacred chants as you browse divine content.",
+  },
+  {
+    icon: Compass,
+    title: "Personalised Kundali",
+    description: "Input your birth date, time, and place to generate your detailed Kundali and planetary charts.",
+  },
+  {
+    icon: Star,
+    title: "Astrology Predictions",
+    description: "Receive daily Rashifal, Bhavishyafal, and horoscope insights to align your life journey.",
+  },
+  {
     icon: MessageSquare,
-    title: "AI Astrology & Guidance",
-    description: "Interact with AI Panditji for personalised astrological insights, Rashifal, and in-depth Kundali readings.",
+    title: "Panditji Guidance",
+    description: "Ask spiritual questions and seek astrological guidance directly from Panditji at any time.",
   },
   {
     icon: Download,
