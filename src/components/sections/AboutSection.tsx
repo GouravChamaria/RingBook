@@ -19,6 +19,9 @@ const AboutSection = () => {
                 Maa Durga, or the wisdom of the Bhagavad Gita, Saar delivers it in the most beautiful,
                 accessible format: short devotional reels and sacred imagery, curated with love and reverence.
               </p>
+              <p>
+                With our new <strong className="text-foreground">AI Spiritual & Astrology Guidance</strong>, you can also converse with our AI Panditji. Get personalised Bhavishyafal, daily Rashifal, and in-depth Kundali readings instantly, combining ancient Hindu wisdom with state-of-the-art AI technology.
+              </p>
               <p>Available exclusively on Android.</p>
             </div>
           </AnimatedSection>

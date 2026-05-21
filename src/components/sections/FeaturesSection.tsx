@@ -1,4 +1,4 @@
-import { Play, Image, Music, Download, Sparkles, Share2 } from "lucide-react";
+import { Play, Image, MessageSquare, Download, Sparkles, Share2 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const features = [
@@ -13,9 +13,9 @@ const features = [
     description: "High-quality devotional images of deities, temples, and spiritual scenes for daily inspiration.",
   },
   {
-    icon: Music,
-    title: "Background Devotional Music",
-    description: "Immerse yourself in soothing bhajans and sacred chants as you browse divine content.",
+    icon: MessageSquare,
+    title: "AI Astrology & Guidance",
+    description: "Interact with AI Panditji for personalised astrological insights, Rashifal, and in-depth Kundali readings.",
   },
   {
     icon: Download,

@@ -5,10 +5,10 @@ import { PLAY_STORE_URL } from "@/lib/constants";
 
 const benefits = [
   "Unlimited HD reel downloads — no watermark",
+  "Personalised guidance & Kundali readings from AI Panditji",
   "Access to the full photo & video library",
   "New spiritual content added daily",
   "Ad-free, distraction-free experience",
-  "Background devotional music on all content",
   "Share directly to WhatsApp Status",
 ];
 
