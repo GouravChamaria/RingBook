@@ -14,29 +14,29 @@ Address: Rd 4, Ridhi Sidhi Enclave 1st, Sri Ganganagar, Rajasthan 335001`,
   },
   {
     heading: "ACCEPTANCE OF TERMS",
-    body: `These Terms and Conditions ("Terms") constitute a legally binding agreement between you ("User") and Saar ("we," "us," or "our"), operated by Random Hit LLP, governing your access to and use of the Saar Android application and any associated services. By downloading, installing, or using the Saar app, you confirm that you have read, understood, and agree to be bound by these Terms in their entirety. If you do not agree to these Terms, you must not use the app.`,
+    body: `These Terms and Conditions ("Terms") constitute a legally binding agreement between you ("User") and Chandan ("we," "us," or "our"), operated by Random Hit LLP, governing your access to and use of the Chandan Android application and any associated services. By downloading, installing, or using the Chandan app, you confirm that you have read, understood, and agree to be bound by these Terms in their entirety. If you do not agree to these Terms, you must not use the app.`,
   },
   {
     heading: "DESCRIPTION OF SERVICE",
-    body: `Saar is a Hindu spiritual platform available exclusively on Android devices. The app offers two core pillars of experience:
+    body: `Chandan is a Hindu spiritual platform available exclusively on Android devices. The app offers two core pillars of experience:
 
-<strong>1. Devotional Content:</strong> Users can stream devotional short videos (reels), browse and download spiritual photographs, listen to devotional background music, interact with content through likes and comments, and share content to third-party platforms including WhatsApp. All photos, videos, audio, and other devotional content are curated and uploaded by the Saar team. Users do not upload content to the platform.
+<strong>1. Devotional Content:</strong> Users can stream devotional short videos (reels), browse and download spiritual photographs, listen to devotional background music, interact with content through likes and comments, and share content to third-party platforms including WhatsApp. All photos, videos, audio, and other devotional content are curated and uploaded by the Chandan team. Users do not upload content to the platform.
 
-<strong>2. AI Spiritual & Astrology Guidance:</strong> Users can interact with an AI Panditji for personalised spiritual and astrology-based insights, including Rashifal, Kundali readings, Bhavishyafal, and general spiritual guidance. All astrological and spiritual content, predictions, and guidance provided through the AI Panditji feature are strictly for informational and devotional purposes only. Saar does not guarantee the accuracy, reliability, or outcomes of any predictions or guidance provided. Users acknowledge that all interpretations are subjective and should not be relied upon for making financial, legal, medical, or any other life-critical decisions. Saar and Random Hit LLP shall not be held liable for any direct, indirect, incidental, or consequential losses arising from the use of these features.`,
+<strong>2. AI Spiritual & Astrology Guidance:</strong> Users can interact with an AI Panditji for personalised spiritual and astrology-based insights, including Rashifal, Kundali readings, Bhavishyafal, and general spiritual guidance. All astrological and spiritual content, predictions, and guidance provided through the AI Panditji feature are strictly for informational and devotional purposes only. Chandan does not guarantee the accuracy, reliability, or outcomes of any predictions or guidance provided. Users acknowledge that all interpretations are subjective and should not be relied upon for making financial, legal, medical, or any other life-critical decisions. Chandan and Random Hit LLP shall not be held liable for any direct, indirect, incidental, or consequential losses arising from the use of these features.`,
   },
   {
     heading: "ELIGIBILITY",
-    body: `You must be at least 13 years of age to create an account and use Saar. You must be at least 18 years of age, or have the consent of a parent or legal guardian, to purchase a subscription or trial. By using the app, you represent and warrant that you meet these age requirements. If you are under 18 and wish to subscribe, please ensure you have your parent or guardian's permission and that they are aware of and agree to these Terms on your behalf.`,
+    body: `You must be at least 13 years of age to create an account and use Chandan. You must be at least 18 years of age, or have the consent of a parent or legal guardian, to purchase a subscription or trial. By using the app, you represent and warrant that you meet these age requirements. If you are under 18 and wish to subscribe, please ensure you have your parent or guardian's permission and that they are aware of and agree to these Terms on your behalf.`,
   },
   {
     heading: "USER ACCOUNTS",
-    body: `To access most features of Saar, you must sign in using a valid Google account. You are responsible for maintaining the security of your Google account and for all activity that occurs under your Saar account. You must not share your account with others or allow anyone else to access the app using your credentials. You must notify us immediately at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> if you believe your account has been compromised. We reserve the right to suspend or terminate your account if we have reason to believe it is being used in violation of these Terms.
+    body: `To access most features of Chandan, you must sign in using a valid Google account. You are responsible for maintaining the security of your Google account and for all activity that occurs under your Chandan account. You must not share your account with others or allow anyone else to access the app using your credentials. You must notify us immediately at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> if you believe your account has been compromised. We reserve the right to suspend or terminate your account if we have reason to believe it is being used in violation of these Terms.
 
 You agree to provide accurate and complete information when using the app, particularly when engaging with the AI Panditji and astrology features, as the quality of personalised outputs depends on the accuracy of the information provided.`,
   },
   {
     heading: "SUBSCRIPTIONS AND PAYMENTS",
-    body: `Saar offers a free trial period and recurring subscription plans, the details and pricing of which are displayed within the app at the time of purchase. All pricing is in Indian Rupees (INR) and is inclusive of applicable taxes.
+    body: `Chandan offers a free trial period and recurring subscription plans, the details and pricing of which are displayed within the app at the time of purchase. All pricing is in Indian Rupees (INR) and is inclusive of applicable taxes.
 
 The trial period, trial features, duration, and limitations are variable and subject to change at any time without prior notice. Both trial and paid versions may include usage restrictions such as message limits, download quotas, feature caps, or access limitations, which may be modified at our sole discretion.
 
@@ -48,7 +48,7 @@ We reserve the right to modify subscription pricing and plans with reasonable ad
   },
   {
     heading: "REFUND POLICY",
-    body: `All services and subscriptions offered on Saar are non-refundable under any circumstances. Once a payment is made, it cannot be reversed, refunded, or cancelled, regardless of usage or dissatisfaction.
+    body: `All services and subscriptions offered on Chandan are non-refundable under any circumstances. Once a payment is made, it cannot be reversed, refunded, or cancelled, regardless of usage or dissatisfaction.
 
 If you do not wish to be charged after a trial period, you must cancel your subscription before the trial period ends. Once the trial period converts into a paid subscription, no refunds — partial or full — will be issued, even if you are unable to use the app for any reason.
 
@@ -58,25 +58,25 @@ If you are experiencing technical difficulties, we encourage you to contact our 
   },
   {
     heading: "PERMITTED USE OF CONTENT",
-    body: `All photos, videos, audio tracks, and other content available on Saar are owned by or licensed to Saar and are protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable, revocable licence to stream and, where the download feature is enabled on your account, download content from Saar for your own personal, non-commercial use only.
+    body: `All photos, videos, audio tracks, and other content available on Chandan are owned by or licensed to Chandan and are protected by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable, revocable licence to stream and, where the download feature is enabled on your account, download content from Chandan for your own personal, non-commercial use only.
 
-You may not copy, reproduce, distribute, publicly display, publish, sell, license, sublicense, modify, or create derivative works from any content obtained through Saar. You may not re-upload Saar content to any other platform, social media account, or website for any purpose. Sharing content to your personal WhatsApp Status or privately with friends and family is permitted and encouraged.`,
+You may not copy, reproduce, distribute, publicly display, publish, sell, license, sublicense, modify, or create derivative works from any content obtained through Chandan. You may not re-upload Chandan content to any other platform, social media account, or website for any purpose. Sharing content to your personal WhatsApp Status or privately with friends and family is permitted and encouraged.`,
   },
   {
     heading: "CONTENT INFORMATION",
-    body: `All devotional content available on Saar, including visuals, videos, short-form videos (reels), and music, is exclusively created, curated, and uploaded by our team. Some of this content may be AI-generated, including visuals, videos, and music; however, all material is carefully reviewed to ensure it is respectful, culturally appropriate, and aligned with the values, traditions, and sentiments of Hindu culture and its deities. We maintain strict quality and sensitivity standards, and every piece of content is reviewed and verified at least twice by experienced and knowledgeable individuals in this domain before being published on the platform.
+    body: `All devotional content available on Chandan, including visuals, videos, short-form videos (reels), and music, is exclusively created, curated, and uploaded by our team. Some of this content may be AI-generated, including visuals, videos, and music; however, all material is carefully reviewed to ensure it is respectful, culturally appropriate, and aligned with the values, traditions, and sentiments of Hindu culture and its deities. We maintain strict quality and sensitivity standards, and every piece of content is reviewed and verified at least twice by experienced and knowledgeable individuals in this domain before being published on the platform.
 
 Astrological and spiritual guidance provided through the AI Panditji feature is generated using automated computational systems, including third-party language processing technologies. All outputs are for informational and devotional purposes only.`,
   },
   {
     heading: "DISCLAIMER FOR SPIRITUAL AND ASTROLOGICAL CONTENT",
-    body: `Saar provides astrological insights, Rashifal, Kundali readings, and spiritual guidance for informational and devotional purposes only. We do not guarantee the accuracy, completeness, or reliability of any predictions or guidance provided. Users are solely responsible for any decisions or actions taken based on content or guidance received through the app. Saar and Random Hit LLP expressly disclaim any liability for decisions made by users based on astrological or spiritual content provided through the platform.`,
+    body: `Chandan provides astrological insights, Rashifal, Kundali readings, and spiritual guidance for informational and devotional purposes only. We do not guarantee the accuracy, completeness, or reliability of any predictions or guidance provided. Users are solely responsible for any decisions or actions taken based on content or guidance received through the app. Chandan and Random Hit LLP expressly disclaim any liability for decisions made by users based on astrological or spiritual content provided through the platform.`,
   },
   {
     heading: "PROHIBITED CONDUCT",
-    body: `You agree not to use Saar in any manner that violates applicable laws or regulations or these Terms. Specifically, you must not:
+    body: `You agree not to use Chandan in any manner that violates applicable laws or regulations or these Terms. Specifically, you must not:
 
-- Attempt to reverse-engineer, decompile, disassemble, or extract the source code of the Saar application.
+- Attempt to reverse-engineer, decompile, disassemble, or extract the source code of the Chandan application.
 - Attempt to circumvent screenshot restrictions, download blocks, or any other technical protection measures.
 - Use automated tools, bots, scrapers, or scripts to access or interact with the app.
 - Impersonate any person or entity or misrepresent your affiliation with any person.
@@ -88,15 +88,15 @@ Astrological and spiritual guidance provided through the AI Panditji feature is 
   },
   {
     heading: "INTELLECTUAL PROPERTY",
-    body: `The Saar name, logo (सार), app design, user interface, all original content, and all associated trademarks are the exclusive property of Saar, operated by Random Hit LLP. Nothing in these Terms transfers any intellectual property rights to you. Your use of Saar does not grant you any right, title, or interest in our intellectual property beyond the limited licence described in these Terms.`,
+    body: `The Chandan name, logo (चंदन), app design, user interface, all original content, and all associated trademarks are the exclusive property of Chandan, operated by Random Hit LLP. Nothing in these Terms transfers any intellectual property rights to you. Your use of Chandan does not grant you any right, title, or interest in our intellectual property beyond the limited licence described in these Terms.`,
   },
   {
     heading: "DISCLAIMER OF WARRANTIES",
-    body: `Saar is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that the app will be uninterrupted, error-free, or completely secure. We do not guarantee that the content available on Saar is accurate, complete, or up to date. Devotional, spiritual, and astrological content is provided for inspirational and informational purposes only. To the fullest extent permitted by applicable law, we disclaim all implied warranties including merchantability, fitness for a particular purpose, and non-infringement. Saar does not assume any liability for interruptions, errors, delays, or unavailability of the platform.`,
+    body: `Chandan is provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that the app will be uninterrupted, error-free, or completely secure. We do not guarantee that the content available on Chandan is accurate, complete, or up to date. Devotional, spiritual, and astrological content is provided for inspirational and informational purposes only. To the fullest extent permitted by applicable law, we disclaim all implied warranties including merchantability, fitness for a particular purpose, and non-infringement. Chandan does not assume any liability for interruptions, errors, delays, or unavailability of the platform.`,
   },
   {
     heading: "ACCOUNT DELETION",
-    body: `You may delete your Saar account at any time using any of the following methods:
+    body: `You may delete your Chandan account at any time using any of the following methods:
 
 - <strong>Through the App:</strong> Navigate to Account → Settings → Delete Account.
 - <strong>Via Web Form:</strong> Submit a deletion request through our form at: <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform" target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-2">https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform</a>
@@ -105,16 +105,16 @@ Astrological and spiritual guidance provided through the AI Panditji feature is 
 We will process your request within 30 days. Deleting your account will result in permanent loss of your subscription, download history, conversation history, and all profile data. This action cannot be undone. Any unused portion of a paid subscription period at the time of deletion will not be refunded.`,
   },
   {
-    heading: "TERMINATION BY SAAR",
-    body: `We reserve the right to suspend or permanently terminate your account and access to Saar at our sole discretion, with or without notice, if we believe you have violated these Terms, engaged in fraudulent activity, or behaved in a manner harmful to other users or to the platform. In the event of termination for cause, no refund will be issued for any remaining subscription period.`,
+    heading: "TERMINATION BY CHANDAN",
+    body: `We reserve the right to suspend or permanently terminate your account and access to Chandan at our sole discretion, with or without notice, if we believe you have violated these Terms, engaged in fraudulent activity, or behaved in a manner harmful to other users or to the platform. In the event of termination for cause, no refund will be issued for any remaining subscription period.`,
   },
   {
     heading: "GOVERNING LAW AND JURISDICTION",
-    body: `These Terms are governed by and construed in accordance with the laws of India. Any disputes arising from these Terms or your use of Saar shall be subject to the jurisdiction determined by Random Hit LLP in accordance with applicable Indian law. If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.`,
+    body: `These Terms are governed by and construed in accordance with the laws of India. Any disputes arising from these Terms or your use of Chandan shall be subject to the jurisdiction determined by Random Hit LLP in accordance with applicable Indian law. If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.`,
   },
   {
     heading: "CHANGES TO THESE TERMS",
-    body: `We reserve the right to modify these Terms at any time. When we make material changes, we will notify you through a prominent in-app notice. Your continued use of Saar after such notification constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you must stop using the app and may request account deletion as described above.`,
+    body: `We reserve the right to modify these Terms at any time. When we make material changes, we will notify you through a prominent in-app notice. Your continued use of Chandan after such notification constitutes your acceptance of the revised Terms. If you do not agree to the updated Terms, you must stop using the app and may request account deletion as described above.`,
   },
   {
     heading: "CONTACT",

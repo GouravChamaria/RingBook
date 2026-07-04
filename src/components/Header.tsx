@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import saarLogo from "@/assets/saar-logo.svg";
+import chandanLogo from "@/assets/chandan-logo.png";
 import { PLAY_STORE_URL } from "@/lib/constants";
 
 const navLinks = [
@@ -50,7 +50,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
-          <img src={saarLogo} alt="Saar" className="h-8 md:h-10" />
+          <img src={chandanLogo} alt="Chandan" className="h-8 md:h-10 object-contain" />
         </Link>
 
         {/* Desktop nav */}

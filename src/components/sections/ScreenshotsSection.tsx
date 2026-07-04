@@ -1,30 +1,30 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import PhoneMockup from "@/components/PhoneMockup";
-import splashLogoScreenshot from "@/assets/screenshots/splash-logo.jpeg";
-import welcomeLoginScreenshot from "@/assets/screenshots/welcome-login.jpeg";
-import exploreGridScreenshot from "@/assets/screenshots/explore-grid.jpeg";
-import profileAccountScreenshot from "@/assets/screenshots/profile-account.jpeg";
+import screen0 from "@/assets/screenshots/screen-0.png";
+import screen1 from "@/assets/screenshots/screen-1.png";
+import screen2 from "@/assets/screenshots/screen-2.png";
+import screen2_1 from "@/assets/screenshots/screen-2.1.png";
 
 const screenshots = [
   {
-    src: splashLogoScreenshot,
-    alt: "Saar splash screen",
+    src: screen0,
+    alt: "Chandan splash screen",
     title: "Elegant splash screen",
   },
   {
-    src: welcomeLoginScreenshot,
-    alt: "Saar welcome and sign in screen",
+    src: screen1,
+    alt: "Chandan language selection screen",
+    title: "Choose language step",
+  },
+  {
+    src: screen2,
+    alt: "Chandan welcome and sign in screen",
     title: "Warm onboarding flow",
   },
   {
-    src: exploreGridScreenshot,
-    alt: "Saar explore page",
-    title: "Explore sacred categories",
-  },
-  {
-    src: profileAccountScreenshot,
-    alt: "Saar profile and settings page",
-    title: "Profile, plans, and support",
+    src: screen2_1,
+    alt: "Chandan premium subscription screen",
+    title: "Premium subscription plan",
   },
 ];
 

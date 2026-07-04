@@ -7,20 +7,20 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
-              What is <span className="text-primary">Saar</span>?
+              What is <span className="text-primary">Chandan</span>?
             </h2>
             <div className="space-y-4 text-muted-foreground font-body leading-relaxed">
               <p>
-                <strong className="text-foreground">Saar (सार)</strong> means 'essence' in Sanskrit. We built
-                Saar to bring the essence of Hindu spirituality to your fingertips — every single day.
+                <strong className="text-foreground">Chandan (चंदन)</strong> means 'sandalwood' in Sanskrit. We built
+                Chandan to bring the essence of Hindu spirituality to your fingertips — every single day.
               </p>
               <p>
                 Whether you seek the blessings of Lord Ganesha, the strength of Lord Hanuman, the grace of
-                Maa Durga, or the wisdom of the Bhagavad Gita, Saar delivers it in the most beautiful,
+                Maa Durga, or the wisdom of the Bhagavad Gita, Chandan delivers it in the most beautiful,
                 accessible format: short devotional reels and sacred imagery, curated with love and reverence.
               </p>
               <p>
-                With our newly introduced <strong className="text-foreground">Astrology & Panditji Guidance</strong>, Saar offers even more features. Along with watching devotional reels and bhakti content, you can now explore detailed astrology. Simply share your date of birth, place of birth, time, and name, and Panditji will guide you throughout your spiritual and astrological journey. Generate your personalized Kundali, ask your life questions, and get custom predictions to light up your path.
+                With our newly introduced <strong className="text-foreground">Astrology & Panditji Guidance</strong>, Chandan offers even more features. Along with watching devotional reels and bhakti content, you can now explore detailed astrology. Simply share your date of birth, place of birth, time, and name, and Panditji will guide you throughout your spiritual and astrological journey. Generate your personalized Kundali, ask your life questions, and get custom predictions to light up your path.
               </p>
               <p>Available exclusively on Android.</p>
             </div>

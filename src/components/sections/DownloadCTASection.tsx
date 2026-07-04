@@ -13,7 +13,7 @@ const DownloadCTASection = () => {
             Begin Your Spiritual Journey Today.
           </h2>
           <p className="text-primary-foreground/80 font-body text-lg mb-8 max-w-xl mx-auto">
-            Download Saar free on Android.
+            Download Chandan free on Android.
           </p>
           <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
             <Button className="rounded-full bg-card text-primary hover:scale-[1.04] transition-transform shadow-xl px-10 py-6 text-base font-semibold">

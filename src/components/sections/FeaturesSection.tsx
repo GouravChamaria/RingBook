@@ -58,7 +58,7 @@ const FeaturesSection = () => {
             Everything Sacred, In One App
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-body">
-            Saar brings together the best of Hindu spiritual content in a beautiful, easy-to-use experience.
+            Chandan brings together the best of Hindu spiritual content in a beautiful, easy-to-use experience.
           </p>
         </AnimatedSection>
 

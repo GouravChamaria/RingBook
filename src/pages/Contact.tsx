@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const sections = [
   {
     heading: "We’d Love to Hear from You",
-    body: `Whether you have a question about your subscription, need help with the app, want to report an issue, or simply want to share your experience with Saar, our support team is here to help. We are a small, passionate team dedicated to bringing the beauty of Hindu spirituality to your screen every day, and we take every message seriously.`,
+    body: `Whether you have a question about your subscription, need help with the app, want to report an issue, or simply want to share your experience with Chandan, our support team is here to help. We are a small, passionate team dedicated to bringing the beauty of Hindu spirituality to your screen every day, and we take every message seriously.`,
   },
   {
     heading: "How to Reach Us",
@@ -13,11 +13,11 @@ const sections = [
   },
   {
     heading: "Account and Subscription Support",
-    body: `If you are experiencing issues with your subscription — such as a payment not reflecting, features not unlocking after a successful trial, or difficulty cancelling — please email us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Subscription Support" and include the email address registered to your Saar account. This helps us locate your account quickly and resolve your issue without unnecessary back-and-forth. For cancellation requests that you are unable to complete within the app, you can email us directly and we will process it on your behalf.`,
+    body: `If you are experiencing issues with your subscription — such as a payment not reflecting, features not unlocking after a successful trial, or difficulty cancelling — please email us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Subscription Support" and include the email address registered to your Chandan account. This helps us locate your account quickly and resolve your issue without unnecessary back-and-forth. For cancellation requests that you are unable to complete within the app, you can email us directly and we will process it on your behalf.`,
   },
   {
     heading: "Account Deletion Requests",
-    body: `If you wish to permanently delete your Saar account and all associated data, you can do so from within the app by going to Account → Settings → Delete Account. If you prefer to submit your request by email, write to us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Account Deletion Request" and include your registered email address. We will process all deletion requests within 30 days and send you a confirmation once your data has been removed from our systems.
+    body: `If you wish to permanently delete your Chandan account and all associated data, you can do so from within the app by going to Account → Settings → Delete Account. If you prefer to submit your request by email, write to us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Account Deletion Request" and include your registered email address. We will process all deletion requests within 30 days and send you a confirmation once your data has been removed from our systems.
 
 User can also request their account deletion from here:
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform" target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-2">https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform</a>`,
@@ -28,7 +28,7 @@ User can also request their account deletion from here:
   },
   {
     heading: "General and Feedback",
-    body: `We genuinely value feedback from our community. If you have a suggestion for a new category of spiritual content, a feature you'd like to see, or simply want to share how Saar has added value to your daily spiritual practice, please write to us. Every piece of feedback is read by the team and taken into consideration as we continue to grow and improve the platform.`,
+    body: `We genuinely value feedback from our community. If you have a suggestion for a new category of spiritual content, a feature you'd like to see, or simply want to share how Chandan has added value to your daily spiritual practice, please write to us. Every piece of feedback is read by the team and taken into consideration as we continue to grow and improve the platform.`,
   },
 ];
 

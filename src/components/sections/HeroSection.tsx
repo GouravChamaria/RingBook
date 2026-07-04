@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Download, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/PhoneMockup";
-import homeFeedScreenshot from "@/assets/screenshots/home-feed.jpeg";
+import screen3 from "@/assets/screenshots/screen-3.png";
 import { PLAY_STORE_URL } from "@/lib/constants";
 
 const HeroSection = () => {
@@ -68,9 +68,9 @@ const HeroSection = () => {
           >
             <div className="animate-float">
               <PhoneMockup
-                src={homeFeedScreenshot}
-                alt="Saar home feed screen"
-                label="Saar home feed"
+                src={screen3}
+                alt="Chandan home feed screen"
+                label="Chandan home feed"
                 imageClassName="object-top"
                 priority
               />

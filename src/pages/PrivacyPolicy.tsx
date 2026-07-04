@@ -14,17 +14,17 @@ Address: Rd 4, Ridhi Sidhi Enclave 1st, Sri Ganganagar, Rajasthan 335001`,
   },
   {
     heading: "INTRODUCTION",
-    body: `Welcome to Saar (सार). Saar is a Hindu spiritual platform available on Android devices that combines devotional short-form content with AI-powered spiritual and astrological guidance. Through Saar, users can stream, like, share, and download devotional reels (short videos), photos, and spiritual imagery, as well as interact with an AI Panditji for personalised astrology-based insights, Rashifal, Kundali readings, and spiritual guidance.
+    body: `Welcome to Chandan (चंदन). Chandan is a Hindu spiritual platform available on Android devices that combines devotional short-form content with AI-powered spiritual and astrological guidance. Through Chandan, users can stream, like, share, and download devotional reels (short videos), photos, and spiritual imagery, as well as interact with an AI Panditji for personalised astrology-based insights, Rashifal, Kundali readings, and spiritual guidance.
 
-This Privacy Policy explains what information we collect, how we use it, and how we protect it. By downloading, installing, or using the Saar app, you agree to the practices described in this policy. If you do not agree, please do not use the app.`,
+This Privacy Policy explains what information we collect, how we use it, and how we protect it. By downloading, installing, or using the Chandan app, you agree to the practices described in this policy. If you do not agree, please do not use the app.`,
   },
   {
     heading: "INFORMATION WE COLLECT",
     body: `<strong>A. Information You Provide</strong>
 
-When you sign in to Saar, we use Google Sign-In as the sole authentication method. Through this process, we receive your full name, email address, and Google profile photo. We do not collect your Google password at any time.
+When you sign in to Chandan, we use Google Sign-In as the sole authentication method. Through this process, we receive your full name, email address, and Google profile photo. We do not collect your Google password at any time.
 
-For users who engage with the AI spiritual and astrology features of Saar, we may additionally collect information you voluntarily provide, including your first name, last name, date of birth, place of birth (city or location), current city, and gender. This information is collected strictly for the purpose of delivering personalised astrological insights, Rashifal, Kundali readings, and other spiritually relevant content. The accuracy and relevance of these interpretations depend on the authenticity of the information you provide. Saar shall not be responsible for incorrect outputs resulting from inaccurate or incomplete user data.
+For users who engage with the AI spiritual and astrology features of Chandan, we may additionally collect information you voluntarily provide, including your first name, last name, date of birth, place of birth (city or location), current city, and gender. This information is collected strictly for the purpose of delivering personalised astrological insights, Rashifal, Kundali readings, and other spiritually relevant content. The accuracy and relevance of these interpretations depend on the authenticity of the information you provide. Chandan shall not be responsible for incorrect outputs resulting from inaccurate or incomplete user data.
 
 <strong>B. Usage Data</strong>
 
@@ -40,7 +40,7 @@ We collect basic device information including your device model, operating syste
   },
   {
     heading: "HOW WE USE YOUR INFORMATION",
-    body: `We use your name and email address to create and manage your Saar account, authenticate you when you return to the app, and communicate with you regarding your subscription, account status, or support queries.
+    body: `We use your name and email address to create and manage your Chandan account, authenticate you when you return to the app, and communicate with you regarding your subscription, account status, or support queries.
 
 We use your personal details such as date of birth, place of birth, and gender solely to generate personalised astrological and spiritual content through the AI Panditji feature. This information is used exclusively for delivering the requested astrological service and for no other purpose.
 
@@ -50,15 +50,15 @@ We use your device information solely for technical compatibility and debugging 
 
 We do not use your personal information to serve third-party targeted advertisements. We do not sell, rent, or trade your personal data to any third party for commercial purposes.
 
-The Saar platform utilises automated computational systems, including third-party language processing technologies, for generating astrological and spiritual outputs and responses through the AI Panditji feature.`,
+The Chandan platform utilises automated computational systems, including third-party language processing technologies, for generating astrological and spiritual outputs and responses through the AI Panditji feature.`,
   },
   {
     heading: "CONTENT DOWNLOADS",
-    body: `The Saar app allows subscribed users to download devotional reels (short videos) and photos directly to their device. When you download content, the file is saved to your device's local storage. We do not monitor, scan, or access any other files on your device. Downloaded content is provided for personal, non-commercial use only. You may not redistribute, re-upload, or commercialise any content downloaded from Saar.`,
+    body: `The Chandan app allows subscribed users to download devotional reels (short videos) and photos directly to their device. When you download content, the file is saved to your device's local storage. We do not monitor, scan, or access any other files on your device. Downloaded content is provided for personal, non-commercial use only. You may not redistribute, re-upload, or commercialise any content downloaded from Chandan.`,
   },
   {
     heading: "SUBSCRIPTIONS AND BILLING",
-    body: `Saar offers a trial period and recurring subscription plans. Subscription payments are processed by our third-party payment gateway partner. We receive confirmation of successful or failed transactions but do not store your payment credentials. Your subscription status — active, trial, or cancelled — is stored on our servers and linked to your account. If you cancel your subscription, you retain access until the end of your current billing period. If you cancel during a free trial, access is revoked immediately. You can manage or cancel your subscription from within the app.`,
+    body: `Chandan offers a trial period and recurring subscription plans. Subscription payments are processed by our third-party payment gateway partner. We receive confirmation of successful or failed transactions but do not store your payment credentials. Your subscription status — active, trial, or cancelled — is stored on our servers and linked to your account. If you cancel your subscription, you retain access until the end of your current billing period. If you cancel during a free trial, access is revoked immediately. You can manage or cancel your subscription from within the app.`,
   },
   {
     heading: "DATA SHARING",
@@ -77,17 +77,17 @@ Any third-party service providers we work with are contractually required to han
   },
   {
     heading: "ACCOUNT DELETION",
-    body: `You have the right to delete your Saar account at any time. You can request account deletion using any of the following methods:
+    body: `You have the right to delete your Chandan account at any time. You can request account deletion using any of the following methods:
 
 - <strong>Through the App:</strong> Navigate to Account → Settings → Delete Account.
 - <strong>Via Web Form:</strong> Submit a deletion request through our form at: <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform" target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-2">https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform</a>
-- <strong>Via Email:</strong> Send an email to <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Account Deletion Request" and include the email address associated with your Saar account.
+- <strong>Via Email:</strong> Send an email to <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Account Deletion Request" and include the email address associated with your Chandan account.
 
 We will process your deletion request within 30 days. Upon deletion, your profile information, usage history, conversation history, and all associated personal data will be permanently removed from our servers. Note that downloaded content already saved to your device will not be remotely deleted, as it resides on your local storage.`,
   },
   {
     heading: "CHILDREN'S PRIVACY",
-    body: `The Saar app is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has created an account or provided us with personal information, we will delete that information immediately. If you are a parent or guardian and believe your child has used Saar without your consent, please contact us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a>.`,
+    body: `The Chandan app is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has created an account or provided us with personal information, we will delete that information immediately. If you are a parent or guardian and believe your child has used Chandan without your consent, please contact us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a>.`,
   },
   {
     heading: "SECURITY",
@@ -99,7 +99,7 @@ We will process your deletion request within 30 days. Upon deletion, your profil
   },
   {
     heading: "CHANGES TO THIS PRIVACY POLICY",
-    body: `We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make significant changes, we will notify you through a prominent notice within the app. Your continued use of Saar after such notice constitutes your acceptance of the updated policy. We encourage you to review this page periodically.`,
+    body: `We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make significant changes, we will notify you through a prominent notice within the app. Your continued use of Chandan after such notice constitutes your acceptance of the updated policy. We encourage you to review this page periodically.`,
   },
   {
     heading: "CONTACT",
