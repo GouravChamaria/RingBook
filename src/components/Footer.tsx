@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <img src={chandanLogo} alt="Chandan" className="h-10 w-fit object-contain" />
             <p className="text-sm text-muted-foreground max-w-xs">
-              Your daily dose of divine — Hindu spiritual reels & photos.
+              Your daily dose of divine — Hindu spiritual ringtones, wallpapers, alarms & mantras.
             </p>
           </div>
 

@@ -14,7 +14,7 @@ Address: Rd 4, Ridhi Sidhi Enclave 1st, Sri Ganganagar, Rajasthan 335001`,
   },
   {
     heading: "INTRODUCTION",
-    body: `Welcome to Chandan (चंदन). Chandan is a Hindu spiritual platform available on Android devices that combines devotional short-form content with AI-powered spiritual and astrological guidance. Through Chandan, users can stream, like, share, and download devotional reels (short videos), photos, and spiritual imagery, as well as interact with an AI Panditji for personalised astrology-based insights, Rashifal, Kundali readings, and spiritual guidance.
+    body: `Welcome to Chandan (चंदन). Chandan is a Hindu spiritual platform available on Android devices. Through Chandan, users can browse, set, download, and share devotional ringtones, wallpapers, alarms, and mantras for their daily spiritual practice.
 
 This Privacy Policy explains what information we collect, how we use it, and how we protect it. By downloading, installing, or using the Chandan app, you agree to the practices described in this policy. If you do not agree, please do not use the app.`,
   },
@@ -24,11 +24,9 @@ This Privacy Policy explains what information we collect, how we use it, and how
 
 When you sign in to Chandan, we use Google Sign-In as the sole authentication method. Through this process, we receive your full name, email address, and Google profile photo. We do not collect your Google password at any time.
 
-For users who engage with the AI spiritual and astrology features of Chandan, we may additionally collect information you voluntarily provide, including your first name, last name, date of birth, place of birth (city or location), current city, and gender. This information is collected strictly for the purpose of delivering personalised astrological insights, Rashifal, Kundali readings, and other spiritually relevant content. The accuracy and relevance of these interpretations depend on the authenticity of the information you provide. Chandan shall not be responsible for incorrect outputs resulting from inaccurate or incomplete user data.
-
 <strong>B. Usage Data</strong>
 
-We automatically collect certain usage data when you interact with the app. This includes information about which content you view, like, share, comment on, or download; how many times you scroll through the feed; your interactions with the AI Panditji feature, including conversation history; and general interaction patterns within the app. We collect this data to improve content delivery, personalise your experience, and manage platform features such as scroll limits and download quotas.
+We automatically collect certain usage data when you interact with the app. This includes information about which ringtones, wallpapers, alarms, or mantras you download or share, and general interaction patterns within the app. We collect this data to improve content delivery and manage platform features.
 
 <strong>C. Device Information</strong>
 
@@ -42,19 +40,15 @@ We collect basic device information including your device model, operating syste
     heading: "HOW WE USE YOUR INFORMATION",
     body: `We use your name and email address to create and manage your Chandan account, authenticate you when you return to the app, and communicate with you regarding your subscription, account status, or support queries.
 
-We use your personal details such as date of birth, place of birth, and gender solely to generate personalised astrological and spiritual content through the AI Panditji feature. This information is used exclusively for delivering the requested astrological service and for no other purpose.
-
-We use your usage data to decide which content to show you, to track download quotas and feature access based on your subscription tier, and to generate anonymised, aggregated analytics that help us understand how the platform is being used overall.
+We use your usage data to track download quotas and feature access based on your subscription tier, and to generate anonymised, aggregated analytics that help us understand how the platform is being used overall.
 
 We use your device information solely for technical compatibility and debugging purposes.
 
-We do not use your personal information to serve third-party targeted advertisements. We do not sell, rent, or trade your personal data to any third party for commercial purposes.
-
-The Chandan platform utilises automated computational systems, including third-party language processing technologies, for generating astrological and spiritual outputs and responses through the AI Panditji feature.`,
+We do not use your personal information to serve third-party targeted advertisements. We do not sell, rent, or trade your personal data to any third party for commercial purposes.`,
   },
   {
     heading: "CONTENT DOWNLOADS",
-    body: `The Chandan app allows subscribed users to download devotional reels (short videos) and photos directly to their device. When you download content, the file is saved to your device's local storage. We do not monitor, scan, or access any other files on your device. Downloaded content is provided for personal, non-commercial use only. You may not redistribute, re-upload, or commercialise any content downloaded from Chandan.`,
+    body: `The Chandan app allows subscribed users to download devotional ringtones, wallpapers, alarms, and mantras directly to their device. When you download content, the file is saved to your device's local storage. We do not monitor, scan, or access any other files on your device. Downloaded content is provided for personal, non-commercial use only. You may not redistribute, re-upload, or commercialise any content downloaded from Chandan.`,
   },
   {
     heading: "SUBSCRIPTIONS AND BILLING",
@@ -66,7 +60,7 @@ The Chandan platform utilises automated computational systems, including third-p
 
 - With our payment processing partner solely to complete your subscription transaction.
 - With analytics service providers to help us understand app usage in aggregated, anonymised form.
-- With trusted infrastructure and technology service providers that assist in operating the platform, including third-party language processing technologies used for the AI Panditji feature.
+- With trusted infrastructure and technology service providers that assist in operating the platform.
 - With law enforcement or regulatory authorities if we are required to do so by applicable law, court order, or governmental authority.
 
 Any third-party service providers we work with are contractually required to handle your data securely and only for the specific purpose for which it was shared. User data may be stored, processed, and transmitted through secure servers and third-party infrastructure providers. By using the app, you consent to such storage and processing, including cross-border data transfers where applicable.`,

@@ -17,10 +17,10 @@ const AboutSection = () => {
               <p>
                 Whether you seek the blessings of Lord Ganesha, the strength of Lord Hanuman, the grace of
                 Maa Durga, or the wisdom of the Bhagavad Gita, Chandan delivers it in the most beautiful,
-                accessible format: short devotional reels and sacred imagery, curated with love and reverence.
+                accessible format: high-quality devotional ringtones, wallpapers, alarms, and mantras, curated with love and reverence.
               </p>
               <p>
-                With our newly introduced <strong className="text-foreground">Astrology & Panditji Guidance</strong>, Chandan offers even more features. Along with watching devotional reels and bhakti content, you can now explore detailed astrology. Simply share your date of birth, place of birth, time, and name, and Panditji will guide you throughout your spiritual and astrological journey. Generate your personalized Kundali, ask your life questions, and get custom predictions to light up your path.
+                With our curated selection of devotional sounds and visuals, Chandan helps you stay connected to the divine throughout your day. Browse through hundreds of high-quality spiritual ringtones, set sacred alarms to wake up with peace, download vibrant deity wallpapers for your phone, and recite powerful mantras for your daily devotional practice.
               </p>
               <p>Available exclusively on Android.</p>
             </div>

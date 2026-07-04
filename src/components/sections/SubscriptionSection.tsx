@@ -4,9 +4,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { PLAY_STORE_URL } from "@/lib/constants";
 
 const benefits = [
-  "Unlimited HD reel downloads — no watermark",
-  "Personalised guidance & Kundali readings from Panditji",
-  "Access to the full photo & video library",
+  "Unlimited high-quality ringtones & alarm downloads",
+  "Access to the full HD wallpaper & mantra collection",
+  "Premium, crystal-clear audio content",
   "New spiritual content added daily",
   "Ad-free, distraction-free experience",
   "Share directly to WhatsApp Status",

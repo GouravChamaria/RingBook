@@ -1,51 +1,36 @@
-import { Play, Image, Music, Compass, Star, MessageSquare, Download, Sparkles, Share2 } from "lucide-react";
+import { Music, Image, Bell, BookOpen, Download, Share2 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const features = [
   {
-    icon: Play,
-    title: "Devotional Reels",
-    description: "Short, inspiring spiritual videos featuring divine mantras, stories, and visual prayers.",
+    icon: Music,
+    title: "Devotional Ringtones",
+    description: "Set beautiful bhaktis, spiritual melodies, and chants as your ringtone.",
   },
   {
     icon: Image,
-    title: "Sacred Photo Gallery",
-    description: "High-quality devotional images of deities, temples, and spiritual scenes for daily inspiration.",
+    title: "Divine Wallpapers",
+    description: "Vibrant, high-definition sacred wallpapers of deities and temples for your phone.",
   },
   {
-    icon: Music,
-    title: "Background Devotional Music",
-    description: "Immerse yourself in soothing bhajans and sacred chants as you browse divine content.",
+    icon: Bell,
+    title: "Spiritual Alarms",
+    description: "Wake up with peace — set devotional alarms, mantras, and morning prayers.",
   },
   {
-    icon: Compass,
-    title: "Personalised Kundali",
-    description: "Input your birth date, time, and place to generate your detailed Kundali and planetary charts.",
-  },
-  {
-    icon: Star,
-    title: "Astrology Predictions",
-    description: "Receive daily Rashifal, Bhavishyafal, and horoscope insights to align your life journey.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Panditji Guidance",
-    description: "Ask spiritual questions and seek astrological guidance directly from Panditji at any time.",
+    icon: BookOpen,
+    title: "Sacred Mantras",
+    description: "Read, listen, and recite powerful Vedic mantras and chants for daily devotion.",
   },
   {
     icon: Download,
     title: "Download & Save",
-    description: "Save your favourite reels and photos to your device for offline viewing anytime.",
-  },
-  {
-    icon: Sparkles,
-    title: "Daily Fresh Content",
-    description: "New spiritual content curated and added every single day to nourish your soul.",
+    description: "Download your favorite ringtones, alarms, and wallpapers directly to your storage.",
   },
   {
     icon: Share2,
     title: "Share to WhatsApp",
-    description: "Spread the divine energy — share reels and photos directly to your WhatsApp Status.",
+    description: "Spread the positive vibes — share spiritual assets directly to WhatsApp with one click.",
   },
 ];
 

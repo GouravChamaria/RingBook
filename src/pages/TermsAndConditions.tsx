@@ -18,11 +18,7 @@ Address: Rd 4, Ridhi Sidhi Enclave 1st, Sri Ganganagar, Rajasthan 335001`,
   },
   {
     heading: "DESCRIPTION OF SERVICE",
-    body: `Chandan is a Hindu spiritual platform available exclusively on Android devices. The app offers two core pillars of experience:
-
-<strong>1. Devotional Content:</strong> Users can stream devotional short videos (reels), browse and download spiritual photographs, listen to devotional background music, interact with content through likes and comments, and share content to third-party platforms including WhatsApp. All photos, videos, audio, and other devotional content are curated and uploaded by the Chandan team. Users do not upload content to the platform.
-
-<strong>2. AI Spiritual & Astrology Guidance:</strong> Users can interact with an AI Panditji for personalised spiritual and astrology-based insights, including Rashifal, Kundali readings, Bhavishyafal, and general spiritual guidance. All astrological and spiritual content, predictions, and guidance provided through the AI Panditji feature are strictly for informational and devotional purposes only. Chandan does not guarantee the accuracy, reliability, or outcomes of any predictions or guidance provided. Users acknowledge that all interpretations are subjective and should not be relied upon for making financial, legal, medical, or any other life-critical decisions. Chandan and Random Hit LLP shall not be held liable for any direct, indirect, incidental, or consequential losses arising from the use of these features.`,
+    body: `Chandan is a Hindu spiritual platform available exclusively on Android devices. The app offers a curated collection of Hindu devotional ringtones, wallpapers, alarms, and mantras. Users can browse, preview, download, and set these assets on their devices, and share them to third-party platforms including WhatsApp. All photos, wallpapers, mantras, and audio content are curated and uploaded by the Chandan team. Users do not upload content to the platform.`,
   },
   {
     heading: "ELIGIBILITY",
@@ -30,9 +26,7 @@ Address: Rd 4, Ridhi Sidhi Enclave 1st, Sri Ganganagar, Rajasthan 335001`,
   },
   {
     heading: "USER ACCOUNTS",
-    body: `To access most features of Chandan, you must sign in using a valid Google account. You are responsible for maintaining the security of your Google account and for all activity that occurs under your Chandan account. You must not share your account with others or allow anyone else to access the app using your credentials. You must notify us immediately at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> if you believe your account has been compromised. We reserve the right to suspend or terminate your account if we have reason to believe it is being used in violation of these Terms.
-
-You agree to provide accurate and complete information when using the app, particularly when engaging with the AI Panditji and astrology features, as the quality of personalised outputs depends on the accuracy of the information provided.`,
+    body: `To access most features of Chandan, you must sign in using a valid Google account. You are responsible for maintaining the security of your Google account and for all activity that occurs under your Chandan account. You must not share your account with others or allow anyone else to access the app using your credentials. You must notify us immediately at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> if you believe your account has been compromised. We reserve the right to suspend or terminate your account if we have reason to believe it is being used in violation of these Terms.`,
   },
   {
     heading: "SUBSCRIPTIONS AND PAYMENTS",
@@ -64,13 +58,7 @@ You may not copy, reproduce, distribute, publicly display, publish, sell, licens
   },
   {
     heading: "CONTENT INFORMATION",
-    body: `All devotional content available on Chandan, including visuals, videos, short-form videos (reels), and music, is exclusively created, curated, and uploaded by our team. Some of this content may be AI-generated, including visuals, videos, and music; however, all material is carefully reviewed to ensure it is respectful, culturally appropriate, and aligned with the values, traditions, and sentiments of Hindu culture and its deities. We maintain strict quality and sensitivity standards, and every piece of content is reviewed and verified at least twice by experienced and knowledgeable individuals in this domain before being published on the platform.
-
-Astrological and spiritual guidance provided through the AI Panditji feature is generated using automated computational systems, including third-party language processing technologies. All outputs are for informational and devotional purposes only.`,
-  },
-  {
-    heading: "DISCLAIMER FOR SPIRITUAL AND ASTROLOGICAL CONTENT",
-    body: `Chandan provides astrological insights, Rashifal, Kundali readings, and spiritual guidance for informational and devotional purposes only. We do not guarantee the accuracy, completeness, or reliability of any predictions or guidance provided. Users are solely responsible for any decisions or actions taken based on content or guidance received through the app. Chandan and Random Hit LLP expressly disclaim any liability for decisions made by users based on astrological or spiritual content provided through the platform.`,
+    body: `All devotional content available on Chandan, including wallpapers, ringtones, alarms, and mantras, is exclusively created, curated, and uploaded by our team. Some of this content may be AI-generated; however, all material is carefully reviewed to ensure it is respectful, culturally appropriate, and aligned with the values, traditions, and sentiments of Hindu culture. We maintain strict quality and sensitivity standards, and every piece of content is reviewed and verified at least twice by experienced and knowledgeable individuals in this domain before being published on the platform.`,
   },
   {
     heading: "PROHIBITED CONDUCT",

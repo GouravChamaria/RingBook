@@ -35,7 +35,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-base md:text-lg text-muted-foreground max-w-lg font-body"
             >
-              Stream premium Hindu spiritual reels, download sacred imagery, and consult with Panditji for personalised daily Rashifal, Kundali readings, and astrology predictions — all on your Android phone.
+              Stream and download premium Hindu spiritual ringtones, wallpapers, alarms, and mantras — all on your Android phone.
             </motion.p>
 
             <motion.div
