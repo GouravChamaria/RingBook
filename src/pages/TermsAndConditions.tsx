@@ -8,7 +8,7 @@ const sections = [
 Last Updated: May 2025
 
 <strong>Contact Information:</strong>
-Phone: +91 87697 63320
+Phone: +91 87699 7438
 Email: <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a>
 Address: Rd 4, Ridhi Sidhi Enclave 1st, Sri Ganganagar, Rajasthan 335001`,
   },
@@ -111,7 +111,7 @@ We will process your request within 30 days. Deleting your account will result i
 <strong>Random Hit LLP</strong>
 Rd 4, Ridhi Sidhi Enclave 1st
 Sri Ganganagar, Rajasthan 335001
-Phone: +91 87697 63320
+Phone: +91 87699 7438
 Email: <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a>`,
   },
 ];

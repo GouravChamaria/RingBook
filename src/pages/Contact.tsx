@@ -37,8 +37,8 @@ const contactDetails = [
     icon: Phone,
     label: "Phone",
     content: (
-      <a href="tel:+918769763320" className="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
-        +91 87697 63320
+      <a href="tel:+91876997438" className="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
+        +91 87699 7438
       </a>
     ),
   },
