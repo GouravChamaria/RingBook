@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,51 +6,49 @@
 
 @layer base {
   :root {
-    --background: 150 20% 98%;
-    --foreground: 160 50% 10%;
+    --background: 240 20% 98%;
+    --foreground: 240 40% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 160 50% 10%;
+    --card-foreground: 240 40% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 50% 10%;
+    --popover-foreground: 240 40% 10%;
 
-    --primary: 160 84% 24%;
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 150 25% 94%;
-    --secondary-foreground: 160 50% 12%;
+    --secondary: 245 30% 95%;
+    --secondary-foreground: 240 40% 12%;
 
-    --muted: 150 15% 93%;
-    --muted-foreground: 160 20% 35%;
+    --muted: 240 15% 93%;
+    --muted-foreground: 240 20% 40%;
 
-    --accent: 43 90% 50%;
-    --accent-foreground: 160 84% 12%;
+    --accent: 280 85% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 150 20% 88%;
-    --input: 150 20% 86%;
-    --ring: 160 84% 24%;
+    --border: 240 20% 88%;
+    --input: 240 20% 86%;
+    --ring: 262 83% 58%;
 
     --radius: 0.75rem;
 
-    --emerald: 160 84% 24%;
-    --emerald-light: 150 45% 95%;
-    --emerald-dark: 160 84% 14%;
-    --gold: 43 90% 50%;
-    --gold-light: 43 85% 94%;
-    --warm-white: 150 25% 99%;
+    --violet: 262 83% 58%;
+    --indigo: 245 90% 65%;
+    --violet-light: 250 50% 96%;
+    --warm-white: 240 20% 99%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 160 84% 24%;
+    --sidebar-primary: 262 83% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 150 25% 94%;
-    --sidebar-accent-foreground: 160 50% 10%;
-    --sidebar-border: 150 20% 88%;
-    --sidebar-ring: 160 84% 24%;
+    --sidebar-accent: 245 30% 95%;
+    --sidebar-accent-foreground: 240 40% 10%;
+    --sidebar-border: 240 20% 88%;
+    --sidebar-ring: 262 83% 58%;
   }
 }
 
@@ -63,13 +61,13 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
   h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Outfit', sans-serif;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Outfit', sans-serif;
   }
   .font-body {
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -94,9 +92,9 @@
   animation: fade-up 0.6s ease-out forwards;
 }
 
-/* Islamic Geometric & Light motif background */
+/* Radiant gradient background pattern */
 .mandala-bg {
-  background-image: radial-gradient(circle at 50% 50%, hsl(var(--gold) / 0.06) 0%, transparent 75%);
+  background-image: radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.07) 0%, transparent 75%);
 }
 
 /* Frosted glass header */
@@ -107,21 +105,22 @@
 }
 
 .header-scrolled {
-  box-shadow: 0 4px 20px hsl(160 50% 10% / 0.08);
+  box-shadow: 0 4px 20px hsl(240 40% 10% / 0.08);
 }
 
-/* Emerald & Gold gradient */
+/* Violet & Indigo gradient */
 .gradient-saffron {
-  background: linear-gradient(135deg, hsl(160 84% 22%), hsl(160 84% 14%));
+  background: linear-gradient(135deg, hsl(262 83% 54%), hsl(245 90% 60%));
 }
 
 /* Hero gradient bg */
 .hero-gradient {
-  background: linear-gradient(160deg, hsl(var(--emerald-light)) 0%, hsl(var(--warm-white)) 45%, hsl(var(--gold-light) / 0.3) 100%);
+  background: linear-gradient(160deg, hsl(var(--violet-light)) 0%, hsl(var(--warm-white)) 50%, hsl(262 80% 96%) 100%);
 }
 
 /* Section warm bg */
 .section-warm {
-  background: linear-gradient(180deg, hsl(var(--emerald-light)) 0%, hsl(var(--background)) 100%);
+  background: linear-gradient(180deg, hsl(var(--violet-light)) 0%, hsl(var(--background)) 100%);
 }
+
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/mera-noor/App Icon 1024.png";
+import logo from "@/assets/ringbook/Logo.png";
 import { APP_NAME, COMPANY_DETAILS } from "@/lib/constants";
 
 const Footer = () => {
@@ -17,11 +17,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           <div className="md:col-span-6 flex flex-col gap-3">
             <div className="flex items-center gap-3">
-              <img src={logo} alt={APP_NAME} className="h-10 w-10 rounded-xl object-cover shadow-sm border border-emerald-900/10" />
-              <span className="font-display text-2xl font-bold text-emerald-950">{APP_NAME}</span>
+              <img src={logo} alt={APP_NAME} className="h-10 w-10 rounded-xl object-cover shadow-sm border border-violet-500/10" />
+              <span className="font-display text-2xl font-extrabold text-slate-900">{APP_NAME}</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-sm font-body leading-relaxed mt-1">
-              Embrace divine serenity — Islamic ringtones, wallpapers, alarms, naats & daily prayers.
+              Your ultimate collection of HD wallpapers, custom ringtones, caller tunes & alarms.
             </p>
             <div className="mt-2 text-xs text-muted-foreground space-y-1 font-body">
               <p className="font-semibold text-foreground">{COMPANY_DETAILS.legalName}</p>
@@ -57,4 +57,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
