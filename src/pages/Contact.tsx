@@ -1,34 +1,32 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Building } from "lucide-react";
+import { APP_NAME, COMPANY_DETAILS } from "@/lib/constants";
 
 const sections = [
   {
     heading: "We’d Love to Hear from You",
-    body: `Whether you have a question about your subscription, need help with the app, want to report an issue, or simply want to share your experience with Chandan, our support team is here to help. We are a small, passionate team dedicated to bringing the beauty of Hindu spirituality to your screen every day, and we take every message seriously.`,
+    body: `Whether you have a question about your subscription, need help with the app, want to report an issue, or simply want to share your experience with ${APP_NAME}, our support team is here to help. We are dedicated to bringing divine audio and serene wallpapers to your screen every day, and we take every message seriously.`,
   },
   {
     heading: "How to Reach Us",
-    body: `The fastest way to reach us is by email. You can write to us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> for any and all enquiries — whether technical, billing-related, content-related, or general. Our support team monitors this inbox actively and aims to respond to every message within 24 to 48 hours on business days (Monday through Saturday, 10:00 AM to 6:00 PM IST). We are closed on Sundays and major Indian public holidays, but we will get back to you on the next available business day.`,
+    body: `The fastest way to reach us is by email. You can write to us at <a href="mailto:${COMPANY_DETAILS.email}" class="text-primary underline underline-offset-2">${COMPANY_DETAILS.email}</a> for any enquiries — technical, billing-related, content-related, or general. Our support team monitors this inbox actively and aims to respond within 24 to 48 hours on business days (Monday through Saturday, 10:00 AM to 6:00 PM IST).`,
   },
   {
     heading: "Account and Subscription Support",
-    body: `If you are experiencing issues with your subscription — such as a payment not reflecting, features not unlocking after a successful trial, or difficulty cancelling — please email us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Subscription Support" and include the email address registered to your Chandan account. This helps us locate your account quickly and resolve your issue without unnecessary back-and-forth. For cancellation requests that you are unable to complete within the app, you can email us directly and we will process it on your behalf.`,
+    body: `If you are experiencing issues with your subscription — such as a payment not reflecting, features not unlocking after a successful trial, or difficulty cancelling — please email us at <a href="mailto:${COMPANY_DETAILS.email}" class="text-primary underline underline-offset-2">${COMPANY_DETAILS.email}</a> with the subject line "Subscription Support" and include the email address registered to your ${APP_NAME} account.`,
   },
   {
     heading: "Account Deletion Requests",
-    body: `If you wish to permanently delete your Chandan account and all associated data, you can do so from within the app by going to Account → Settings → Delete Account. If you prefer to submit your request by email, write to us at <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with the subject line "Account Deletion Request" and include your registered email address. We will process all deletion requests within 30 days and send you a confirmation once your data has been removed from our systems.
-
-User can also request their account deletion from here:
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform" target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-2">https://docs.google.com/forms/d/e/1FAIpQLSemYrlfaEcdLI6RDMO8eFnNxOsPzzFzkZ6Ygq71rREOdSSmYQ/viewform</a>`,
+    body: `If you wish to permanently delete your ${APP_NAME} account and all associated data, you can do so from within the app by going to Account → Settings → Delete Account. If you prefer to submit your request by email, write to us at <a href="mailto:${COMPANY_DETAILS.email}" class="text-primary underline underline-offset-2">${COMPANY_DETAILS.email}</a> with the subject line "Account Deletion Request" and include your registered email address.`,
   },
   {
     heading: "Content and Technical Issues",
-    body: `If you encounter a bug, a crash, content that is not loading correctly, or any other technical problem, please email <a href="mailto:support@randomhit.site" class="text-primary underline underline-offset-2">support@randomhit.site</a> with a brief description of the issue, your device model, and your Android version. Screenshots or screen recordings are always helpful and appreciated. If you wish to report a specific piece of content as inappropriate or incorrectly categorised, please include the name or description of the content in your message.`,
+    body: `If you encounter a bug, a crash, or content that is not loading correctly, please email <a href="mailto:${COMPANY_DETAILS.email}" class="text-primary underline underline-offset-2">${COMPANY_DETAILS.email}</a> with a brief description of the issue, your device model, and your Android version. Screenshots are always appreciated.`,
   },
   {
-    heading: "General and Feedback",
-    body: `We genuinely value feedback from our community. If you have a suggestion for a new category of spiritual content, a feature you'd like to see, or simply want to share how Chandan has added value to your daily spiritual practice, please write to us. Every piece of feedback is read by the team and taken into consideration as we continue to grow and improve the platform.`,
+    heading: "General Feedback",
+    body: `We genuinely value feedback from our community. If you have suggestions for new wallpaper collections, ringtones, or app features, please reach out to us.`,
   },
 ];
 
@@ -37,9 +35,16 @@ const contactDetails = [
     icon: Phone,
     label: "Phone",
     content: (
-      <a href="tel:+91876997438" className="text-2xl font-semibold text-foreground hover:text-primary transition-colors">
-        +91 87699 7438
+      <a href={`tel:${COMPANY_DETAILS.phoneRaw}`} className="text-xl md:text-2xl font-semibold text-foreground hover:text-primary transition-colors">
+        {COMPANY_DETAILS.phone}
       </a>
+    ),
+  },
+  {
+    icon: Building,
+    label: "GSTIN",
+    content: (
+      <p className="text-xl font-semibold text-foreground">{COMPANY_DETAILS.gstin}</p>
     ),
   },
   {
@@ -47,10 +52,10 @@ const contactDetails = [
     label: "Registered Office",
     content: (
       <address className="not-italic space-y-1 text-foreground">
-        <p className="text-2xl font-semibold">Random Hit LLP</p>
-        <p>RD 4 Floor No: First, Ridhi Sidhi Enclave 1st</p>
-        <p>Sri Ganganagar, Rajasthan</p>
-        <p>India - 335001</p>
+        <p className="text-xl md:text-2xl font-semibold">{COMPANY_DETAILS.legalName}</p>
+        <p>{COMPANY_DETAILS.addressLine1}</p>
+        <p>{COMPANY_DETAILS.addressLine2}</p>
+        <p>{COMPANY_DETAILS.cityStatePincode}</p>
       </address>
     ),
   },
@@ -65,8 +70,8 @@ const Contact = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
             Contact Us
           </h1>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            We'd Love to Hear from You
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto font-body">
+            We'd Love to Hear from You — {APP_NAME} Support Team
           </p>
         </div>
       </section>
@@ -81,10 +86,10 @@ const Contact = () => {
               <div>
                 <p className="text-sm text-muted-foreground">Email us at</p>
                 <a
-                  href="mailto:support@randomhit.site"
+                  href={`mailto:${COMPANY_DETAILS.email}`}
                   className="text-base font-semibold text-primary hover:underline"
                 >
-                  support@randomhit.site
+                  {COMPANY_DETAILS.email}
                 </a>
               </div>
             </div>
@@ -95,11 +100,11 @@ const Contact = () => {
                   key={detail.label}
                   className="flex items-start gap-5 rounded-3xl border border-border bg-card/80 p-6 shadow-sm"
                 >
-                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-primary/10">
-                    <detail.icon className="h-8 w-8 text-primary" />
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
+                    <detail.icon className="h-7 w-7" />
                   </div>
-                  <div className="space-y-2">
-                    <p className="text-lg text-muted-foreground">{detail.label}</p>
+                  <div className="space-y-1">
+                    <p className="text-sm font-medium text-muted-foreground">{detail.label}</p>
                     {detail.content}
                   </div>
                 </div>
@@ -129,3 +134,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

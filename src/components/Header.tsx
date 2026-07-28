@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import chandanLogo from "@/assets/chandan-logo.png";
-import { PLAY_STORE_URL } from "@/lib/constants";
+import logo from "@/assets/mera-noor/App Icon 1024.png";
+import { PLAY_STORE_URL, APP_NAME } from "@/lib/constants";
 
 const navLinks = [
   { label: "Features", href: "/#features" },
@@ -49,8 +49,9 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:px-8">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={chandanLogo} alt="Chandan" className="h-8 md:h-10 object-contain" />
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt={APP_NAME} className="h-9 w-9 rounded-xl object-cover shadow-sm border border-emerald-900/10" />
+          <span className="font-display text-xl font-bold text-emerald-950 tracking-tight">{APP_NAME}</span>
         </Link>
 
         {/* Desktop nav */}

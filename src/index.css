@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,50 +6,51 @@
 
 @layer base {
   :root {
-    --background: 30 33% 98%;
-    --foreground: 20 10% 15%;
+    --background: 150 20% 98%;
+    --foreground: 160 50% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 15%;
+    --card-foreground: 160 50% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 15%;
+    --popover-foreground: 160 50% 10%;
 
-    --primary: 18 82% 51%;
+    --primary: 160 84% 24%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 30% 95%;
-    --secondary-foreground: 20 10% 15%;
+    --secondary: 150 25% 94%;
+    --secondary-foreground: 160 50% 12%;
 
-    --muted: 30 20% 94%;
-    --muted-foreground: 20 10% 40%;
+    --muted: 150 15% 93%;
+    --muted-foreground: 160 20% 35%;
 
-    --accent: 0 60% 46%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 90% 50%;
+    --accent-foreground: 160 84% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 20% 90%;
-    --input: 30 20% 88%;
-    --ring: 18 82% 51%;
+    --border: 150 20% 88%;
+    --input: 150 20% 86%;
+    --ring: 160 84% 24%;
 
     --radius: 0.75rem;
 
-    --saffron: 18 82% 51%;
-    --saffron-light: 30 80% 95%;
-    --maroon: 5 60% 44%;
-    --cream: 30 33% 98%;
-    --warm-white: 40 33% 99%;
+    --emerald: 160 84% 24%;
+    --emerald-light: 150 45% 95%;
+    --emerald-dark: 160 84% 14%;
+    --gold: 43 90% 50%;
+    --gold-light: 43 85% 94%;
+    --warm-white: 150 25% 99%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 18 82% 51%;
+    --sidebar-primary: 160 84% 24%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 30 30% 95%;
-    --sidebar-accent-foreground: 20 10% 15%;
-    --sidebar-border: 30 20% 90%;
-    --sidebar-ring: 18 82% 51%;
+    --sidebar-accent: 150 25% 94%;
+    --sidebar-accent-foreground: 160 50% 10%;
+    --sidebar-border: 150 20% 88%;
+    --sidebar-ring: 160 84% 24%;
   }
 }
 
@@ -59,7 +60,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
   h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
@@ -71,7 +72,7 @@
     font-family: 'Playfair Display', serif;
   }
   .font-body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 }
 
@@ -93,33 +94,34 @@
   animation: fade-up 0.6s ease-out forwards;
 }
 
-/* Mandala decorative background */
+/* Islamic Geometric & Light motif background */
 .mandala-bg {
-  background-image: radial-gradient(circle at 50% 50%, hsl(var(--saffron) / 0.03) 0%, transparent 70%);
+  background-image: radial-gradient(circle at 50% 50%, hsl(var(--gold) / 0.06) 0%, transparent 75%);
 }
 
 /* Frosted glass header */
 .header-glass {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: hsl(var(--warm-white) / 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: hsl(var(--warm-white) / 0.88);
 }
 
 .header-scrolled {
-  box-shadow: 0 1px 12px hsl(var(--foreground) / 0.06);
+  box-shadow: 0 4px 20px hsl(160 50% 10% / 0.08);
 }
 
-/* Saffron gradient */
+/* Emerald & Gold gradient */
 .gradient-saffron {
-  background: linear-gradient(135deg, hsl(var(--saffron)), hsl(var(--maroon)));
+  background: linear-gradient(135deg, hsl(160 84% 22%), hsl(160 84% 14%));
 }
 
 /* Hero gradient bg */
 .hero-gradient {
-  background: linear-gradient(160deg, hsl(var(--saffron-light)) 0%, hsl(var(--warm-white)) 50%, hsl(var(--cream)) 100%);
+  background: linear-gradient(160deg, hsl(var(--emerald-light)) 0%, hsl(var(--warm-white)) 45%, hsl(var(--gold-light) / 0.3) 100%);
 }
 
 /* Section warm bg */
 .section-warm {
-  background: linear-gradient(180deg, hsl(var(--saffron-light)) 0%, hsl(var(--cream)) 100%);
+  background: linear-gradient(180deg, hsl(var(--emerald-light)) 0%, hsl(var(--background)) 100%);
 }
+
