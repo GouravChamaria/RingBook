@@ -25,7 +25,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-100/80 border border-violet-300/50 w-fit text-violet-900 font-semibold text-xs tracking-wide uppercase font-body"
             >
-              <span>✦</span> Custom Ringtones, HD Wallpapers & Alarms
+              <span>✦</span> Custom Ringtones, Sound & Clap Unlock, HD Wallpapers & Alarms
             </motion.div>
 
             <motion.h1
@@ -44,7 +44,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-base md:text-lg text-muted-foreground max-w-lg font-body leading-relaxed"
             >
-              Discover thousands of high-definition wallpapers, custom caller ringtones, alarm tones, and sound clips — all packaged in one seamless Android app.
+              Discover thousands of high-definition wallpapers, custom caller ringtones, sound & clap phone unlock, alarm tones, and sound clips — all packaged in one seamless Android app.
             </motion.p>
 
             <motion.div

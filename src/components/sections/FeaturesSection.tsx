@@ -1,4 +1,4 @@
-import { Music, Image, Bell, Sparkles, Download, Share2 } from "lucide-react";
+import { Music, Image, Bell, Sparkles, Download, Share2, Mic } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { APP_NAME } from "@/lib/constants";
 
@@ -7,6 +7,11 @@ const features = [
     icon: Music,
     title: "HD Ringtones & Caller Tones",
     description: "Set high-fidelity melodies, trending tracks, and instrumental tones as your ringtone.",
+  },
+  {
+    icon: Mic,
+    title: "Unlock Phone with Sound or Clap",
+    description: "Unlock your phone effortlessly using your custom sound or clap detection.",
   },
   {
     icon: Image,
