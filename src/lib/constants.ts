@@ -1,5 +1,5 @@
-export const APP_NAME = "RingBook";
-export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=zarvonis.car.app";
+export const APP_NAME = "Bhakti Dham";
+export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=zarvonis.chandan.app";
 
 export const COMPANY_DETAILS = {
   name: "Zarvonis Ventures Private Limited",

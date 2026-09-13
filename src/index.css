@@ -6,49 +6,50 @@
 
 @layer base {
   :root {
-    --background: 240 20% 98%;
-    --foreground: 240 40% 10%;
+    --background: 35 30% 98%;
+    --foreground: 24 45% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 40% 10%;
+    --card-foreground: 24 45% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 40% 10%;
+    --popover-foreground: 24 45% 12%;
 
-    --primary: 262 83% 58%;
+    --primary: 25 95% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 245 30% 95%;
-    --secondary-foreground: 240 40% 12%;
+    --secondary: 35 55% 95%;
+    --secondary-foreground: 24 45% 15%;
 
-    --muted: 240 15% 93%;
-    --muted-foreground: 240 20% 40%;
+    --muted: 32 30% 93%;
+    --muted-foreground: 25 25% 42%;
 
-    --accent: 280 85% 60%;
+    --accent: 38 92% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 20% 88%;
-    --input: 240 20% 86%;
-    --ring: 262 83% 58%;
+    --border: 30 25% 88%;
+    --input: 30 25% 86%;
+    --ring: 25 95% 50%;
 
     --radius: 0.75rem;
 
-    --violet: 262 83% 58%;
-    --indigo: 245 90% 65%;
-    --violet-light: 250 50% 96%;
-    --warm-white: 240 20% 99%;
+    --saffron: 25 95% 50%;
+    --saffron-light: 36 90% 95%;
+    --maroon: 12 75% 35%;
+    --cream: 40 60% 97%;
+    --warm-white: 35 40% 99%;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 262 83% 58%;
+    --sidebar-foreground: 24 5.3% 26.1%;
+    --sidebar-primary: 25 95% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 245 30% 95%;
-    --sidebar-accent-foreground: 240 40% 10%;
-    --sidebar-border: 240 20% 88%;
-    --sidebar-ring: 262 83% 58%;
+    --sidebar-accent: 35 55% 95%;
+    --sidebar-accent-foreground: 24 45% 12%;
+    --sidebar-border: 30 25% 88%;
+    --sidebar-ring: 25 95% 50%;
   }
 }
 
@@ -108,19 +109,19 @@
   box-shadow: 0 4px 20px hsl(240 40% 10% / 0.08);
 }
 
-/* Violet & Indigo gradient */
+/* Saffron & Amber gradient */
 .gradient-saffron {
-  background: linear-gradient(135deg, hsl(262 83% 54%), hsl(245 90% 60%));
+  background: linear-gradient(135deg, hsl(25 95% 50%), hsl(38 95% 52%));
 }
 
 /* Hero gradient bg */
 .hero-gradient {
-  background: linear-gradient(160deg, hsl(var(--violet-light)) 0%, hsl(var(--warm-white)) 50%, hsl(262 80% 96%) 100%);
+  background: linear-gradient(160deg, hsl(var(--saffron-light)) 0%, hsl(var(--warm-white)) 50%, hsl(35 80% 96%) 100%);
 }
 
 /* Section warm bg */
 .section-warm {
-  background: linear-gradient(180deg, hsl(var(--violet-light)) 0%, hsl(var(--background)) 100%);
+  background: linear-gradient(180deg, hsl(var(--saffron-light)) 0%, hsl(var(--background)) 100%);
 }
 
 

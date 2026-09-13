@@ -16,7 +16,7 @@ Address: ${COMPANY_DETAILS.fullAddress}`,
   },
   {
     heading: "INTRODUCTION",
-    body: `Welcome to ${APP_NAME}. ${APP_NAME} is an Islamic spiritual and content platform available on Android devices. Through ${APP_NAME}, users can browse, set, download, and share devotional ringtones, wallpapers, alarms, naats, and duas for daily practice.
+    body: `Welcome to ${APP_NAME}. ${APP_NAME} is a comprehensive devotional and spiritual companion platform available on Android devices. Through ${APP_NAME}, users can listen to sacred mantras, practice Jaap chanting with an audio player and counter, set morning spiritual alarms, customize divine HD wallpapers, and set devotional ringtones for daily practice.
 
 This Privacy Policy explains what information we collect, how we use it, and how we protect it. By downloading, installing, or using the ${APP_NAME} app, you agree to the practices described in this policy.`,
   },
@@ -28,7 +28,7 @@ When you sign in to ${APP_NAME}, we use Google Sign-In as an authentication meth
 
 <strong>B. Usage Data</strong>
 
-We automatically collect certain usage data when you interact with the app. This includes information about which ringtones, wallpapers, alarms, or naats you download or share, and interaction patterns within the app.
+We automatically collect certain usage data when you interact with the app. This includes information about which mantras, wallpapers, alarms, or ringtones you download, save, or set, and general interaction patterns within the app.
 
 <strong>C. Device Information</strong>
 

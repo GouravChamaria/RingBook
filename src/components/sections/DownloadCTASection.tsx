@@ -10,15 +10,15 @@ const DownloadCTASection = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <AnimatedSection className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white mb-4">
-            Start Customising Your Phone Today.
+            Embark on Your Spiritual Journey Today
           </h2>
-          <p className="text-violet-100/90 font-body text-lg mb-8 max-w-xl mx-auto">
-            Download {APP_NAME} free on Android devices.
+          <p className="text-amber-100/90 font-body text-lg mb-8 max-w-xl mx-auto">
+            Download {APP_NAME} and bring peace, sacred mantras, and divine harmony into your everyday life.
           </p>
           <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
-            <Button className="rounded-full bg-white text-violet-900 hover:bg-violet-50 hover:scale-[1.04] transition-transform shadow-xl px-10 py-6 text-base font-semibold">
+            <Button className="rounded-full bg-white text-amber-900 hover:bg-amber-50 hover:scale-[1.04] transition-transform shadow-xl px-10 py-6 text-base font-semibold">
               <Download className="w-5 h-5 mr-2" />
-              Google Play Store
+              Download on Google Play
             </Button>
           </a>
         </AnimatedSection>

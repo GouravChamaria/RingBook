@@ -2,8 +2,6 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { APP_NAME, COMPANY_DETAILS } from "@/lib/constants";
 
-const isMeraNoor = APP_NAME === "Mera Noor";
-
 const sections = [
   {
     heading: "",
@@ -22,25 +20,21 @@ Address: ${COMPANY_DETAILS.fullAddress}`,
   },
   {
     heading: "DESCRIPTION OF SERVICE",
-    body: isMeraNoor
-      ? `${APP_NAME} is an Islamic spiritual application available on Android devices. The app offers a curated collection of Islamic devotional ringtones, HD wallpapers, alarms, naats, and duas. Users can preview, download, and set these assets on their devices, and share them to platforms including WhatsApp.`
-      : `${APP_NAME} is a digital catalog and customization application available on Android devices. The app offers a curated collection of HD wallpapers, ringtones, alarms, and sound effects. Users can preview, download, and set these assets on their devices, and share them to platforms including WhatsApp.`,
+    body: `${APP_NAME} is a devotional and spiritual companion application available on Android devices. The app offers a curated collection of sacred mantras, stotrams, Jaap chanting counters, morning spiritual alarms, HD divine wallpapers, and devotional ringtones. Users can preview, listen, download, and set these assets on their devices.`,
   },
   {
     heading: "USER ACCOUNTS",
-    body: `To access premium features, users sign in via Google authentication. ${APP_NAME} offers trial options and subscription plans. Subscriptions renew automatically until cancelled by the user.`,
+    body: `To access premium features, users sign in via Google authentication. ${APP_NAME} offers flexible in-app packs and subscription tiers ranging from ₹99 to ₹999. Subscriptions renew automatically through Google Play until cancelled by the user.`,
   },
   {
     heading: "SUBSCRIPTIONS AND PAYMENTS",
-    body: `${APP_NAME} offers a free trial period and recurring subscription plans, the details and pricing of which are displayed within the app at the time of purchase. All pricing is in Indian Rupees (INR) and is inclusive of applicable taxes.
+    body: `${APP_NAME} offers in-app purchase options and subscription tiers ranging from ₹99 to ₹999, the details and pricing of which are clearly displayed within the app at the time of purchase. All transactions are processed securely through Google Play In-App Billing in Indian Rupees (INR) and are inclusive of applicable taxes.
 
-The trial period, trial features, duration, and limitations are variable and subject to change at any time without prior notice. Both trial and paid versions may include usage restrictions such as message limits, download quotas, feature caps, or access limitations, which may be modified at our sole discretion.
+Pricing and duration vary based on the tier chosen (e.g. Starter Packs from ₹99, Devotional Passes from ₹99 to ₹499, and Ultimate Seva all-access up to ₹999).
 
-By subscribing, you authorise us (through our payment gateway partner) to charge your selected payment method on a recurring basis until you cancel. Your subscription renews automatically at the end of each billing cycle unless you cancel before the renewal date.
+By subscribing, your payment method on Google Play will be charged on a recurring basis until you cancel. Your subscription renews automatically at the end of each billing cycle unless you cancel via Google Play Subscriptions before the renewal date.
 
-If you cancel a paid subscription, you retain access to premium features until the end of the current paid billing cycle. If you cancel during a free trial, your access to premium features ends immediately upon cancellation.
-
-We reserve the right to modify subscription pricing and plans with reasonable advance notice provided within the app. Continued usage after such changes constitutes acceptance of the revised pricing and terms.`,
+You can manage or cancel your subscription at any time directly through Google Play Store > Payments & Subscriptions. If you cancel a paid subscription, you retain access to premium features until the end of your current billing cycle.`,
   },
   {
     heading: "REFUND POLICY",

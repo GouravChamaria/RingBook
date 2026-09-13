@@ -26,7 +26,7 @@ const sections = [
   },
   {
     heading: "General Feedback",
-    body: `We genuinely value feedback from our community. If you have suggestions for new wallpaper collections, ringtones, or app features, please reach out to us.`,
+    body: `We genuinely value feedback from our community. If you have suggestions for new sacred mantras, stotrams, divine wallpaper collections, devotional ringtones, or spiritual app features, please reach out to us.`,
   },
 ];
 
